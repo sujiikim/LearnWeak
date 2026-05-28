@@ -128,7 +128,7 @@ llamafactory-cli train /path/to/LearnWeak/learnweak_dpo/configs/evocua_synthetic
 ## 📝 Citation
 
 ```bibtex
-@article{kim2026learnweak,
+@article{kim2026learnweaknessesautomateddomain,
   title   = {Learn from Weaknesses: Automated Domain Specialization for Small Computer-Use Agents},
   author  = {Kim, Suji and Kim, Kangsa and Hwang, Sung Ju},
   journal = {arXiv preprint arXiv:2605.28775},
