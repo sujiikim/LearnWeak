@@ -1,0 +1,42 @@
+{
+    "id": "seed2",
+    "config_id": "config-1",
+    "instruction": "Generate black text \"beautiful_sky\" above the current picture, set the size to 120, and make it bold.",
+    "agentnet_id": "0a37b1fb-5d66-4fb9-99b5-8f6ebe35a1b2",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://img.freepik.com/free-photo/happy-young-company-smiling-friends-sitting-park-man-women-having-fun-together_285396-9034.jpg?semt=ais_hybrid&w=740&q=80",
+            "path": "/home/user/Desktop/friends_together.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/friends_together.png"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

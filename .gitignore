@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local environment
+.env
+.venv/
+venv/
+
+# LearnWeak-GEN outputs
+learnweak_gen/rollouts/
+learnweak_gen/data/synthetic_evocua/
+logs/
+
+# LearnWeak-DPO outputs
+learnweak_dpo/data/dpo_images/
+learnweak_dpo/data/llamafactory/
+
+# Local run outputs
+outputs/
+*.log
+
+# Local repository notes
+repository_overall.txt
+repository_train_mecahnism.txt
+repository_train_mechanism.txt

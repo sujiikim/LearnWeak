@@ -1,0 +1,55 @@
+### model
+model_name_or_path: meituan/EvoCUA-8B-20260105
+image_max_pixels: 1e6
+
+### method
+stage: dpo
+do_train: true
+finetuning_type: lora
+lora_rank: 32
+lora_alpha: 64
+# lora_dropout: 0.05
+lora_target: 
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - up_proj
+  - down_proj
+  - gate_proj
+pref_beta: 0.1
+pref_loss: sigmoid  # choices: [sigmoid (dpo), orpo, simpo]
+freeze_vision_tower: true
+# deepspeed: examples/deepspeed/ds_z3_offload_config.json
+
+### dataset
+dataset_dir: learnweak_dpo/data/llamafactory
+dataset: evocua_synthetic_dpo_gimp
+template: qwen3_vl
+cutoff_len: 8192 #16392
+label_dynamic: true
+overwrite_cache: true
+preprocessing_num_workers: 32
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 32 # 1gpu * 2 * 32 = 64
+learning_rate: 1e-6
+num_train_epochs: 20.0
+disable_gradient_checkpointing: false
+
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+max_grad_norm: 1.0 
+
+
+### output
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+run_name: learnweak_gimp_dyn_e20
+output_dir: outputs/learnweak_gimp_dyn_e20
+logging_steps: 1
+save_steps: 40
+plot_loss: true
+overwrite_output_dir: false

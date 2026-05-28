@@ -1,0 +1,50 @@
+{
+    "id": "seed7",
+    "config_id": "config-5",
+    "instruction": "Please rotate the current picture in GIMP and set the rotation angle to 30.00.",
+    "agentnet_id": "4f696ea1-c743-494a-8fd3-2abc1c3bfff6",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://ssl.tzoo-img.com/images/tzoo.10472.0.686818.shutterstock_89117647.jpg",
+            "path": "/home/user/Downloads/golden_gate_bridge.jpg"
+          },
+          {
+            "url": "https://pro.visitparisregion.com/var/crt_idf/storage/images/_aliases/xlarge/6/3/9/7/1107936-2-fre-FR/a2df4b4146ac-7V0A4768-1-.jpg",
+            "path": "/home/user/Downloads/eiffel_tower.jpg"
+          },
+          {
+            "url": "https://th-thumbnailer.cdn-si-edu.com/QKvD6vnuZ3iyuFU6UL7NxK_X7GA=/fit-in/1200x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/0f/be/0fbef764-3c01-481c-956c-b5661f4e6f31/kheops-pyramid-1581-971.jpg",
+            "path": "/home/user/Downloads/pyramid.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Downloads/golden_gate_bridge.mp4"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

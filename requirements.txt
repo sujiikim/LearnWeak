@@ -1,0 +1,11 @@
+# LearnWeak scripts
+numpy
+openai
+pillow
+scikit-learn
+torch
+transformers
+tqdm
+
+# vLLM server used by the generation and replay pipelines
+vllm==0.17.1

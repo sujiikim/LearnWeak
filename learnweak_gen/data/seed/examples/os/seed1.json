@@ -1,0 +1,31 @@
+{
+  "id": "seed1",
+  "config_id": "config-0",
+  "instruction": "Open the settings, find Time & Date, turn off automatic time and date, change the time format to AM/PM, and close the page.",
+  "snapshot": "os",
+  "trajectory": "trajectories/",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    ""
+  ]
+}

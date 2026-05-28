@@ -1,0 +1,45 @@
+{
+    "id": "seed1",
+    "config_id": "config-1",
+    "snapshot": "libreoffice_impress",
+    "instruction": "Create a duplicate slide of the fifth slide after it. Then, on the new slide, remove the center image and add a textbox with \"Thank you\".",
+    "config": [
+        {
+            "type": "download",
+            "parameters": {
+                "files": [
+                    {
+                        "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/BONO-ROSSA.pptx",
+                        "path": "/home/user/Desktop/BONO-ROSSA.pptx"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "sleep",
+            "parameters": {
+                "seconds": 5
+            }
+        },
+        {
+            "type": "open",
+            "parameters": {
+                "path": "/home/user/Desktop/BONO-ROSSA.pptx"
+            }
+        }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+        "libreoffice_impress"
+    ],
+    "evaluator": {
+        "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+        "### Content of /home/user/Desktop/BONO-ROSSA.pptx",
+        "Slide 1:\nJUBILEE OF THE WORLD OF EDUCATION - 27/10 | 1/11/2025\nInternational Congress\n\u00abEducational Constellations - A pact with the future\u00bb\nGLOBAL COMPACT\nON EDUCATION\nBUILDING CONSTELLATIONS\nOF HOPE\n\nSlide 2:\nGLOBAL COMPACT \nON EDUCATION\nTHE IMPACT OF THE GLOBAL COMPACT ON EDUCATION AROUND THE WORLD\n2.\n\nSlide 3:\nGLOBAL COMPACT \nON EDUCATION\nTHE FIRST 7 GOALS OF THE GLOBAL COMPACT \nON EDUCATION\n3.\n\nSlide 4:\nGLOBAL COMPACT \nON EDUCATION\nTHE 3 NEW GOALS OF THE GLOBAL COMPACT \nON EDUCATION\n4.\n\nSlide 5:\nGLOBAL COMPACT \nON EDUCATION\nBUILDING CONSTELLATIONS OF HOPE\n5.\n2.0\n"
+    ]
+}

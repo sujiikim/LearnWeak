@@ -1,0 +1,64 @@
+{
+    "id": "config-4",
+    "snapshot": "libreoffice_calc",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/India_population_by_state.xlsx",
+              "path": "/home/user/Downloads/India_population_by_state.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/Downloads/India_population_by_state.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Content of India_population_by_state.xlsx",
+      "Sheet 1: India",
+      "- Range: Rows 1~29 / Columns A~D (4 columns)",
+      "- Columns: S. No. | State | Area (sq. km) | Population",
+      "First 10 rows of this sheet:",
+      "S. No.\tState\tArea (sq. km)\tPopulation",
+      "1\tRajasthan\t342239\t68548437",
+      "2\tMadhya Pradesh\t308245\t72626809",
+      "3\tMaharashtra\t307713\t112372333",
+      "4\tUttar Pradesh\t240928\t199812341",
+      "5\tGujarat\t196024\t60439692",
+      "6\tKarnataka\t191791\t61095297",
+      "7\tAndhra Pradesh\t162968\t84580777",
+      "8\tOdisha\t155707\t41974218",
+      "9\tChhattisgarh\t135191\t25351462",
+      "Sheet 2: Population_of_India",
+      "- Range: Rows 1~37 / Columns A~C (3 columns)",
+      "- Columns: State | Population | Area",
+      "First 10 rows of this sheet:",
+      "State\tPopulation\tArea",
+      "Uttar Pradesh\t199812341\t240928",
+      "Maharashtra\t112374333\t307713",
+      "Bihar\t104099452\t94163",
+      "West Bengal\t91276115\t88752",
+      "Madhya Pradesh\t72626809\t308245",
+      "Tamil Nadu\t72147030\t130058",
+      "Rajasthan\t68548437\t342239",
+      "Karnataka\t61095297\t191791",
+      "Gujarat\t60439692\t196024"
+    ]
+  }

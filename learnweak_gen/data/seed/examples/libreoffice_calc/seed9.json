@@ -1,0 +1,66 @@
+{
+    "id": "seed9",
+    "config_id": "config-6",
+    "snapshot": "libreoffice_calc",
+    "instruction": "Move the “salary” column next to “employee_title” and reorder the columns.",
+    "agentnet_id": "21b5f89e-2f9f-4530-b2b5-826d33d88e79",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/employee_tables.xlsx",
+              "path": "/home/user/employee_tables.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/employee_tables.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Content of employee_tables.xlsx",
+      "Sheet 1: employees",
+      "- Range: Rows 1~31 / Columns A~M (13 columns)",
+      "- Columns: id | first_name | last_name | age | sex | employee_title | department | salary | target | email | city | address | manager_id",
+      "First 10 rows of this sheet:",
+      "id\tfirst_name\tlast_name\tage\tsex\temployee_title\tdepartment\tsalary\ttarget\temail\tcity\taddress\tmanager_id",
+      "5\tMax\tGeorge\t26\tM\tSales\tSales\t1300\t200\tMax@company.com\tCalifornia\t2638 Richards Avenue\t1",
+      "13\tKatty\tBond\t56\tF\tManager\tManagement\t150000\t0\tKatty@company.com\tArizona\t\t1",
+      "11\tRicherd\tGear\t57\tM\tManager\tManagement\t250000\t0\tRicherd@company.com\tAlabama\t\t1",
+      "10\tJennifer\tDion\t34\tF\tSales\tSales\t1000\t200\tJennifer@company.com\tAlabama\t\t13",
+      "19\tGeorge\tJoe\t50\tM\tManager\tManagement\t100000\t0\tGeorge@company.com\tFlorida\t1003 Wyatt Street\t1",
+      "18\tLaila\tMark\t26\tF\tSales\tSales\t1000\t200\tLaila@company.com\tFlorida\t3655 Spirit Drive\t11",
+      "20\tSarrah\tBicky\t31\tF\tSenior Sales\tSales\t2000\t200\tSarrah@company.com\tFlorida\t1176 Tyler Avenue\t19",
+      "21\tSuzan\tLee\t34\tF\tSales\tSales\t1300\t200\tSuzan@company.com\tFlorida\t1275 Monroe Avenue\t19",
+      "22\tMandy\tJohn\t31\tF\tSales\tSales\t1300\t200\tMandy@company.com\tFlorida\t2510 Maryland Avenue\t19",
+      "Sheet 2: bonus",
+      "- Range: Rows 1~9 / Columns A~B (2 columns)",
+      "- Columns: worker_ref_id | bonus",
+      "All data of this sheet:",
+      "worker_ref_id\tbonus",
+      "1\t5000",
+      "2\t3000",
+      "3\t4000",
+      "1\t4500",
+      "2\t3500",
+      "14\t1200",
+      "17\t2500",
+      "30\t500"
+    ]
+  }

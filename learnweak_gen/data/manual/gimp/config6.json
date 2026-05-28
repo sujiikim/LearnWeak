@@ -1,0 +1,39 @@
+{
+    "id": "config-6",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://static01.nyt.com/images/2025/04/05/travel/27cactustoclouds-04-hwpz/27cactustoclouds-04-hwpz-articleLarge.jpg",
+            "path": "/home/user/Downloads/hiking_sunset.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Downloads/hiking_sunset.jpg"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

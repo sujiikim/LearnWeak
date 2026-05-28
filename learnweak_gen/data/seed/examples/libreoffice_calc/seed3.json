@@ -1,0 +1,53 @@
+{
+    "id": "seed2",
+    "config_id": "config-1",
+    "snapshot": "libreoffice_calc",
+    "instruction": "Capitalize each word in CustomerName, ContactName, and City columns. Set the column width to 4 cm and center-align the content in these columns.",
+    "agentnet_id": "709192e0-acdc-477f-a4a3-be6027fbcadf",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/Customers.xlsx",
+              "path": "/home/user/Customers.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/Customers.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+        "### Content of Customers.xlsx",
+        "Sheet 1: Customers",
+        "- Range: Rows 1~92 / Columns A~H (8 columns)",
+        "- Columns: CustomerID | CustomerName | ContactName | Address | Transaction_Amount | City | PostalCode | Country",
+        "First 10 rows of this sheet:",
+        "CustomerID\tCustomerName\tContactName\tAddress\tTransaction_Amount\tCity\tPostalCode\tCountry",
+        "1\tAlfreds Futterkiste\tMaria Anders\tObere Str. 57\t118\tBerlin\t12209\tGermany",
+        "2\tAna Trujillo Emparedados y helados\tAna Trujillo\tAvda. de la Constitución 2222\t597\tMéxico D.F.\t5021\tMexico",
+        "3\tAntonio Moreno Taquería\tAntonio Moreno\tMataderos 2312\t231\tMéxico D.F.\t5023\tMexico",
+        "4\tAround the Horn\tThomas Hardy\t120 Hanover Sq.\t607\tLondon\tWA1 1DP\tUK",
+        "5\tBerglunds snabbköp\tChristina Berglund\tBerguvsvägen 8\t509\tLuleå\tS-958 22\tSweden",
+        "6\tBlauer See Delikatessen\tHanna Moos\tForsterstr. 57\t220\tMannheim\t68306\tGermany",
+        "7\tBlondel père et fils\tFrédérique Citeaux\t24, place Kléber\t230\tStrasbourg\t67000\tFrance",
+        "8\tBólido Comidas preparadas\tMartín Sommer\tC/ Araquil, 67\t406\tMadrid\t28023\tSpain",
+        "9\tBon app'\tLaurence Lebihans\t12, rue des Bouchers\t596\tMarseille\t13008\tFrance"
+    ]
+  }

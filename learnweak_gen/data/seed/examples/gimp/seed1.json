@@ -1,0 +1,42 @@
+{
+    "id": "seed1",
+    "config_id": "config-0",
+    "snapshot": "gimp",
+    "instruction": "I need to change the settings in GIMP. Please open the preferences, switch the theme to Gray, and enable the Advanced Color Options.",
+    "agentnet_id": "bc2d701f-59a0-46e6-ad54-6d6442c4984a",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://www.nylabone.com/-/media/project/oneweb/nylabone/images/dog101/10-intelligent-dog-breeds/golden-retriever-tongue-out.jpg",
+            "path": "/home/user/Downloads/golden_retriever.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Downloads/golden_retriever.jpg"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

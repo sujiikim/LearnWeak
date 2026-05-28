@@ -1,0 +1,35 @@
+{
+    "id": "seed0",
+    "config_id": "config-0",
+    "agentnet_id": "00406a3b-9879-40b0-94d8-f7d21b7858d7",
+    "instruction": "Please help me change the shortcut key for closing the window to 'Ctrl+Shift' and delete another shortcut key for closing the window.",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

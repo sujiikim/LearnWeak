@@ -1,0 +1,47 @@
+{
+    "id": "config-1",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/model/inference/vllm_inference.py",
+              "path": "/home/user/Documents/vllm_inference.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code",
+            "/home/user/Documents/vllm_inference.py"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Code of /home/user/Documents/vllm_inference.py",
+      "import json\nimport base64\nfrom openai import OpenAI\n\n# vLLM server configuration\nVLLM_BASE_URL = \"http://localhost:8000/v1\"\nMODEL_NAME = \"opencua-7b\"  # Should match --served-model-name in vllm serve\n\nTEST_CASE_DIR = \"./grounding_examples\"\ntest_cases = [\n    f'{TEST_CASE_DIR}/test0.json',\n    f'{TEST_CASE_DIR}/test1.json',\n    f'{TEST_CASE_DIR}/test2.json',\n    f'{TEST_CASE_DIR}/test3.json',\n    f'{TEST_CASE_DIR}/test4.json',\n]\n\nSYSTEM_PROMPT = (\n    \"You are a GUI agent. You are given a task and a screenshot of the screen. \"\n    \"You need to perform a series of pyautogui actions to complete the task.\"\n)\n\n\ndef encode_image(path: str) -> str:\n    \"\"\"Encode image to base64 string.\"\"\"\n    with open(path, \"rb\") as f:\n        return base64.b64encode(f.read()).decode()\n\n\ndef get_test_messages(case_file: str):\n    \"\"\"Load test case and create chat messages.\"\"\"\n    with open(case_file) as f:\n        info = json.load(f)\n        img_name = info['image'].split('/')[-1]\n        img_path = f'{TEST_CASE_DIR}/{img_name}'\n        user_prompt = info['instruction']\n\n    messages = [\n        {\"role\": \"system\", \"content\": SYSTEM_PROMPT},\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"image_url\",\n                    \"image_url\": {\n                        \"url\": f\"data:image/png;base64,{encode_image(img_path)}\"\n                    }\n                },\n                {\"type\": \"text\", \"text\": user_prompt},\n            ],\n        },\n    ]\n    return messages, img_path\n\n\ndef main():\n    # Initialize OpenAI client pointing to vLLM server\n    client = OpenAI(\n        base_url=VLLM_BASE_URL,\n        api_key=\"EMPTY\",  # vLLM doesn't require a real API key\n    )\n\n    print(f\"Connecting to vLLM server at {VLLM_BASE_URL}\")\n    print(f\"Using model: {MODEL_NAME}\")\n    print()\n\n    # Run test cases\n    for tc in test_cases:\n        messages, img_path = get_test_messages(tc)\n\n        response = client.chat.completions.create(\n            model=MODEL_NAME,\n            messages=messages,\n            max_tokens=512,\n            temperature=0,\n        )\n\n        output_text = response.choices[0].message.content\n\n        print(\"=\" * 100)\n        print(f\"Test case: {tc}\")\n        print(f\"Output: {output_text}\")\n        print(\"=\" * 100)\n        print()\n\n\nif __name__ == \"__main__\":\n    main()\n"
+    ]
+  }
+  

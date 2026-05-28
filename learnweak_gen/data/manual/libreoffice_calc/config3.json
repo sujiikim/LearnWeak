@@ -1,0 +1,50 @@
+{
+    "id": "config-3",
+    "snapshot": "libreoffice_calc",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/Health_and_beauty.xlsx",
+              "path": "/home/user/Downloads/Health_and_beauty.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/Downloads/Health_and_beauty.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Content of Health_and_beauty.xlsx",
+      "Sheet 1: Sheet1",
+      "- Range: Rows 1~153 / Columns A~Q (17 columns)",
+      "- Columns: Invoice ID | Branch | City | Customer type | Gender | Product_line | Unit price | Quantity | Tax 5% | Total | Date | Time | Payment | cogs | gross margin percentage | gross income | Rating",
+      "First 10 rows of this sheet:",
+      "Invoice ID\tBranch\tCity\tCustomer type\tGender\tProduct_line\tUnit price\tQuantity\tTax 5%\tTotal\tDate\tTime\tPayment\tcogs\tgross margin percentage\tgross income\tRating",
+      "371-85-5789\tB\tMandalay\tNormal\tMale\tHealth_and_beauty\t87.98\t3\t13.197\t277.137\t2019-05-03 00:00:00\t10:40:00\tEwallet\t263.94\t4.761904762\t13.197\t5.1",
+      "370-41-7321\tB\tMandalay\tMember\tMale\tHealth_and_beauty\t56.69\t9\t25.5105\t535.7205\t2/27/2019\t17:24:00\tCredit card\t510.21\t4.761904762\t25.5105\t8.4",
+      "853-23-2453\tB\tMandalay\tMember\tMale\tHealth_and_beauty\t75.74\t4\t15.148\t318.108\t2/14/2019\t14:35:00\tCash\t302.96\t4.761904762\t15.148\t7.6",
+      "318-68-5053\tB\tMandalay\tNormal\tFemale\tHealth_and_beauty\t76.99\t6\t23.097\t485.037\t2/27/2019\t17:55:00\tCash\t461.94\t4.761904762\t23.097\t6.1",
+      "152-08-9985\tB\tMandalay\tMember\tMale\tHealth_and_beauty\t64.36\t9\t28.962\t608.202\t2019-12-03 00:00:00\t12:09:00\tCredit card\t579.24\t4.761904762\t28.962\t8.6",
+      "766-85-7061\tB\tMandalay\tNormal\tMale\tHealth_and_beauty\t87.87\t10\t43.935\t922.635\t3/29/2019\t10:25:00\tEwallet\t878.7\t4.761904762\t43.935\t5.1",
+      "716-39-1409\tB\tMandalay\tNormal\tMale\tHealth_and_beauty\t30.35\t7\t10.6225\t223.0725\t3/19/2019\t18:19:00\tCash\t212.45\t4.761904762\t10.6225\t8",
+      "743-04-1105\tB\tMandalay\tMember\tMale\tHealth_and_beauty\t97.22\t9\t43.749\t918.729\t3/30/2019\t14:43:00\tEwallet\t874.98\t4.761904762\t43.749\t6",
+      "505-02-0892\tB\tMandalay\tMember\tMale\tHealth_and_beauty\t42.57\t8\t17.028\t357.588\t2/25/2019\t14:12:00\tEwallet\t340.56\t4.761904762\t17.028\t5.6"
+    ]
+  }

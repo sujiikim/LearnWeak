@@ -1,0 +1,43 @@
+{
+  "id": "config-3",
+  "snapshot": "libreoffice_impress",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/being_older_in_an_agesit_so.pptx",
+            "path": "/home/user/Desktop/being_older_in_an_agesit_so.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/being_older_in_an_agesit_so.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/being_older_in_an_agesit_so.pptx",
+    "Slide 1:\nBeing An Older Adult in an Ageist Society\nPatricia M. Schwirian, PhD,RN\nProfessor Emeritus, OSU College of Nursing\nSenior Research Scholar,\nOSU Primary Care Research Institute\nSenior Faculty Affiliate,\nOSU Office of Geriatrics & Gerontology\n\nSlide 2:\nJUST REMEMBER:\nGetting old is not for sissies\nHow old would you be if you didn’t know how old you were? ( S. Paige, date unknown)\n\nSlide 3:\nAGEISM\nWhat is ageism?\nHow is ageism manifested?\nWhat is the theoretical basis for ageism?\nWhat is the process by which ageism persists?\n\nSlide 4:\nAGEISM: What Is It?\n…a term coined by Butler (1969)\n“Ageism reflects a deep-seated uneasiness on the part of young and middle-aged--a personal revulsion and distaste for growing old, disease, disability, and fear of powerlessness, “uselessness”, and death”\nTHUS:\n\nSlide 5:\nIn a society that highly values and has great regard for youth and vitality it is no surprise that ageism exists.\nAgeism is a form of bigotry, just like racism and sexism\n\nSlide 6:\nAgeism can be seen as a process of systematic stereotyping of and discrimination against people because they are old, just as racism and sexism accomplish this with skin color and gender\n\nSlide 7:\n“\n“Ageism” became part of the popular consciousness in the 70’s\nKalish (1979) introduced the concept, a “New Ageism”\n\nSlide 8:\nCharacteristics of  the “New Ageism”\nStereotypes ‘the elderly’ in terms of those OA’s who are the least capable, the least healthy, and the least alert\nPerceive older persons as relatively helpless, dependent individuals requiring support services of agencies and other organizations\n\nSlide 9:\nMoreover...\nEncourages the development of services with little concern as to whether the outcome contributes to reduction in freedom and decision-making power\nProduces a stream of criticism against society in general for its mistreatment of the elderly\n\nSlide 10:\nKalish says:\n“The message of the new ageism seems to be that we understand how badly your are being treated….You are poor, lonely, weak, incompetent, ineffectual, and no longer terribly bright…we are going to relieve your suffering from ageism”.\n\nSlide 11:\nAgeism Revisited (Bytheway & Johnson, 1990)\nAgeism: A set of beliefs originating in the biological variation between people and relating to the aging process\nAgeism is made manifest in the actions of corporate bodies--what is said and done by their representatives and the resulting views that are held by ordinary aging people\n\nSlide 12:\nMoreover, ageism:\nGenerates & reinforces fear & denigration of the aging process, stereotyping assumptions regarding competence, and the need for protection\nConsequences range from well-meaning patronage to unambiguous villification\n\nSlide 13:\nAgeists:\nAvoid older persons on an individual level\nDiscriminate in terms of jobs and utilization of social institutions\nDeride older people through hostile humor\nComplain that older people are a drain on society--that they are just taking, not giving\n\nSlide 14:\nMANIFESTATIONS  of AGEISM\nIn the workplace, OA’s may\nBe “downsized” first\nBe passed over for promotions/raises\nFind their suggestions/observations ignored and/or denigrated\nFind it very difficult to get a new job\n\nSlide 15:\nIn the health care system, OA’s may:\nBe treated as “crocks”\nBe underdiagnosed\nBe overmedicated/undermedicated\nBe patronized\nBe automatically ordered as a DNR\nBe excluded from decisions made about their own care\n\nSlide 16:\nOn television, OA’s:\nAre largely absent from Saturday AM cartoons (unless they are witches)\nShow up primarily in ads for health-problem-oriented products\nAre depicted in stereotypical fashions\n\nSlide 17:\nTHEORETICAL FOUNDATIONS FOR AGEISM\nFear of death in Western society; death & old age are considered synonymous in American society\nUnrelenting emphasis on the youth culture\nAmerican emphasis on productivity (usually narrowly defined in terms of economic potential\nThe manner in which aging was originally researched\n\nSlide 18:\nHow does the ageism “process” work and intensify?\nThe Cycle of Structurally Induced Dependence (Kuypers & Bengston, 1984)\nWhy is it so toxic?\n\nSlide 19:\n\nSlide 20:\nCombatting the Downward Spiral\nRealize that older people are part of the cycle of life; they should not be compartmentalized into an undiffereniated “blob”\nFocus on HEALTH PROMOTION goals as part of healthy aging\n\nSlide 21:\nGive importance to the settings in which individuals age--these help determine their health status in old age\nEmphasize strategies that maintain bonding between generations\n\nSlide 22:\nAnd Finally: Deal With the Myths of Aging as  They Exist\nSource: Rowe, J.W. & Kahn, R.L. (1998). Successful Aging: The MacArthur Foiundation Study.  New York: Dell Publishing Company.\n(available through Amazon.com)\n\nSlide 23:\nMyth #1\nTo be old is to be sick\nFACTS based on Research\nPeople are much more likely to age well than become decrepit & dependent\nAge-related disabilities declining;  of those 65-74 in 1994, a full 89% reported no disability whatever\n\nSlide 24:\nMyth #2\nYou can’t teach an old dog new tricks\nFACTS\nWrong, wrong, wrong, wrong!\nOlder people learn differently,but they learn\nFlexibility & adaptability are actually hall marks of successful aging/agers\n\nSlide 25:\nKey Features Predicting Strong Mental Function in OA’s\nRegular physical activity\nStrong social support system\nBelief in one’s ability to handle what life has to offer\n\nSlide 26:\nMyth # 3\nThe Horse is Out of the Barn\nFACTS\n“Nature is remarkably forgiving”\n“Research shows that it is almost never too late to begin healthy habits, such as smoking cessation, sensible diet, exercise,  & the like.”\n\nSlide 27:\nMyth #4\nThe secret is choose your parents wisely\nFACT\nSwedish Twins Study: only 30% of physical aging can be blamed on genes, & about half the changes in mental function\n“We are, in large part, responsible for our old age.”\n\nSlide 28:\nMyth #5\nOlder adults don’t pull their own weight\nFACTS\nWrong measures: Only paid work counts as “productive”\nAgeism in the workplace\n\nSlide 29:\nThank You For Coming!\n\n"
+  ]
+}

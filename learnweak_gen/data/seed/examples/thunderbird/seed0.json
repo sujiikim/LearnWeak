@@ -1,0 +1,52 @@
+{
+  "id": "seed0",
+  "config_id": "config-0",
+  "instruction": "Create a subfolders named 'god' in the account inbox and create a filter to filter the content from 852736397@qq.com.",
+  "snapshot": "thunderbird",
+  "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/thunderbird/thunderbird-profile.tar.gz",
+              "path": "/home/user/thunderbird-profile.tar.gz"
+            }
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "tar",
+            "-xzv",
+            "--recursive-unlink",
+            "-f",
+            "/home/user/thunderbird-profile.tar.gz",
+            "-C",
+            "/home/user/"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "/usr/bin/thunderbird"
+          ]
+        }
+      }
+    ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": []
+}

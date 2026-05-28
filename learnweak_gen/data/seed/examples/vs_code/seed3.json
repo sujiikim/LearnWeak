@@ -1,0 +1,47 @@
+{
+    "id": "seed3",
+    "config_id": "config-1",
+    "agentnet_id": "3ec49db6-8ab9-4ce9-901f-209072980679",
+    "instruction": "I've already opened the current file in VS Code. Please delete lines 63 to 66. After that, save the changes and then save the file as a copy on the Desktop folder.",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/model/inference/vllm_inference.py",
+              "path": "/home/user/Documents/vllm_inference.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code",
+            "/home/user/Documents/vllm_inference.py"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

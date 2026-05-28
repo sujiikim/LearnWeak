@@ -1,0 +1,56 @@
+{
+    "id": "config-4",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "command",
+        "parameters": {
+          "command": [
+            "mkdir",
+            "-p",
+            "/home/user/computer_use"
+          ]
+        }
+      },
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/bytedance/UI-TARS/refs/heads/main/codes/tests/inference_test.py",
+              "path": "/home/user/computer_use/inference_test.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Code of /home/user/computer_use/inference_test.py",
+      "import os\nimport sys\n\nsys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))\n\n\nfrom PIL import Image\nimport matplotlib.pyplot as plt\n\nimport json\nimport base64\nfrom io import BytesIO\nfrom PIL import Image\n\nimport math\n\nfrom ui_tars.action_parser import IMAGE_FACTOR, MIN_PIXELS, MAX_PIXELS, MAX_RATIO\n\n\ndef round_by_factor(number: int, factor: int) -> int:\n    \"\"\"Returns the closest integer to 'number' that is divisible by 'factor'.\"\"\"\n    return round(number / factor) * factor\n\n\ndef ceil_by_factor(number: int, factor: int) -> int:\n    \"\"\"Returns the smallest integer greater than or equal to 'number' that is divisible by 'factor'.\"\"\"\n    return math.ceil(number / factor) * factor\n\n\ndef floor_by_factor(number: int, factor: int) -> int:\n    \"\"\"Returns the largest integer less than or equal to 'number' that is divisible by 'factor'.\"\"\"\n    return math.floor(number / factor) * factor\n\n\ndef smart_resize(\n    height: int,\n    width: int,\n    factor: int = IMAGE_FACTOR,\n    min_pixels: int = MIN_PIXELS,\n    max_pixels: int = MAX_PIXELS,\n) -> tuple[int, int]:\n    \"\"\"\n    Rescales the image so that the following conditions are met:\n\n    1. Both dimensions (height and width) are divisible by 'factor'.\n\n    2. The total number of pixels is within the range ['min_pixels', 'max_pixels'].\n\n    3. The aspect ratio of the image is maintained as closely as possible.\n    \"\"\"\n    if max(height, width) / min(height, width) > MAX_RATIO:\n        raise ValueError(\n            f\"absolute aspect ratio must be smaller than {MAX_RATIO}, got {max(height, width) / min(height, width)}\"\n        )\n    h_bar = max(factor, round_by_factor(height, factor))\n    w_bar = max(factor, round_by_factor(width, factor))\n    if h_bar * w_bar > max_pixels:\n        beta = math.sqrt((height * width) / max_pixels)\n        h_bar = floor_by_factor(height / beta, factor)\n        w_bar = floor_by_factor(width / beta, factor)\n    elif h_bar * w_bar < min_pixels:\n        beta = math.sqrt(min_pixels / (height * width))\n        h_bar = ceil_by_factor(height * beta, factor)\n        w_bar = ceil_by_factor(width * beta, factor)\n    return h_bar, w_bar\n\n\nif __name__ == '__main__':\n\n    # Assume model output\n    model_raw_response = \"\"\"Thought: xxx\n    Action: click(start_box='(197,525)')\"\"\"\n\n    # Please use re to parse the coordinate values\n    model_output_width = 197\n    model_output_height = 525\n\n    # Open the image\n    img = Image.open('./data/coordinate_process_image.png')\n    width, height = img.size\n    print(f'Original coordinate: {width}, {height}')\n\n    # Calculate the new dimensions\n    new_height, new_width = smart_resize(height, width)\n    new_coordinate = (\n        int(model_output_width / new_width * width),\n        int(model_output_height / new_height * height),\n    )\n    print(f'Resized dimensions: {new_width}, {new_height}')\n    print(new_coordinate)\n\n    # Display the image\n    plt.imshow(img)\n    plt.scatter(\n        [new_coordinate[0]], [new_coordinate[1]], c='red', s=50\n    )  # Mark the point with a red dot\n    plt.title('Visualize Coordinate')\n    plt.axis('off')  # Set to 'off' to hide the axes\n    plt.savefig('./data/coordinate_process_image_som.png', dpi=350)\n"
+    ]
+  }
+  

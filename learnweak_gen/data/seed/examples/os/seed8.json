@@ -1,0 +1,68 @@
+{
+  "id": "seed8",
+  "config_id": "config-6",
+  "instruction": "Open the terminal and navigate to the \"~/Desktop/hellogitworld\" directory, then find how many '*.java' files are there.",
+  "snapshot": "os",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://github.com/githubtraining/hellogitworld/archive/refs/heads/master.zip",
+            "path": "/home/user/Desktop/hellogitworld.zip"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "/bin/bash",
+          "-c",
+          "cd /home/Desktop && unzip -q hellogitworld.zip && rm -rf hellogitworld.zip && mv hellogitworld-master hellogitworld"
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### File structure of this repository:\n",
+    "hellogitworld/pom.xml",
+    "hellogitworld/runme.sh",
+    "hellogitworld/README.txt",
+    "hellogitworld/src/Division.groovy",
+    "hellogitworld/src/Square.groovy",
+    "hellogitworld/src/Main.groovy",
+    "hellogitworld/src/Sum.groovy",
+    "hellogitworld/src/Subtract.groovy",
+    "hellogitworld/src/test/java/com/github/AppTest.java",
+    "hellogitworld/src/main/java/com/github/App.java",
+    "hellogitworld/.gitignore",
+    "hellogitworld/resources/labels.properties",
+    "hellogitworld/.gitattributes",
+    "hellogitworld/fix.txt",
+    "hellogitworld/.travis.yml",
+    "hellogitworld/build.gradle"
+  ]
+}

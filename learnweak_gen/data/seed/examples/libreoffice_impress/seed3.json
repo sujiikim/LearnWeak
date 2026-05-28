@@ -1,0 +1,45 @@
+{
+    "id": "seed3",
+    "config_id": "config-2",
+    "snapshot": "libreoffice_impress",
+    "instruction": "On slide 3, convert the URL www.worldbank.org/gep into a clickable hyperlink that opens in the default browser and format the link text as blue and underlined.",
+    "config": [
+        {
+            "type": "download",
+            "parameters": {
+                "files": [
+                    {
+                        "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/GEP-June-2024-Presentation.pptx",
+                        "path": "/home/user/Desktop/GEP-June-2024-Presentation.pptx"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "sleep",
+            "parameters": {
+                "seconds": 5
+            }
+        },
+        {
+            "type": "open",
+            "parameters": {
+                "path": "/home/user/Desktop/GEP-June-2024-Presentation.pptx"
+            }
+        }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+        "libreoffice_impress"
+    ],
+    "evaluator": {
+        "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+        "### Content of /home/user/Desktop/GEP-June-2024-Presentation.pptx",
+        "Slide 1:\nGlobal Economic Prospects\nJune 2024\nwww.worldbank.org/gep\n\nSlide 2:\nGlobal Economic Prospects  \u2013  June 2024\n2\n\nSlide 3:\nGlobal Economic Prospects  \u2013  June 2024\n3\nUnderlying data and charts can be found at\nwww.worldbank.org/gep\n\nSlide 4:\nGlobal Growth Forecasts\nBroadly Stable Near-Term Growth; Weaker Than the 2010s Average\n4\n\nSlide 5:\nGrowth and Income Catch-Up\nShifting Growth Distribution; Broad-Based Weakness; Few EMDEs Catching Up\n5\n\nSlide 6:\nRisks to the Global Outlook\nDownside Risks Dominate But Presence of Some Upside Risks\n6\n\nSlide 7:\nGlobal Inflation, Interest Rates, and Growth Scenarios\nSlower Disinflation; Elevated Interest Rates; Negative Impact of \u201cHigher for Longer\u201d on Growth\n7\n\nSlide 8:\nInvestment Needs, Impact of Public Investment on Growth\nSlower Public Investment Growth Despite Large Needs and Positive Impacts\n8\n\nSlide 9:\nPublic Investment: Role of Fiscal Space and Investment Efficiency\nGreater Growth Impact with Wider Fiscal Space and Higher Public Investment Efficiency\n9\n\nSlide 10:\nFiscal Positions in Small States\nMore in Debt Distress amid Weaker Primary Balances; Larger Costs of Natural Disasters\n10\n\nSlide 11:\nRevenue and Expenditure Challenges in Small States\nGreater Reliance on Non-Tax Revenues; Spending Inefficiency; Gaps in Fiscal Frameworks\n11\n\nSlide 12:\nTrade Policy\nWeakest Half-Decade Growth; MoreTrade Distortions; Higher Trade Policy Uncertainty\n12\n\nSlide 13:\nStudies by the World Bank Prospects Group\n13\n\n"
+    ]
+}

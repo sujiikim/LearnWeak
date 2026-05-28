@@ -1,0 +1,75 @@
+{
+    "id": "seed5",
+    "config_id": "config-3",
+    "agentnet_id": "",
+    "instruction": "Please help me create a new folder named 'evaluation' in the PC-Agent-E repository, and then create a new file named 'evaluation.py' in this folder.",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://github.com/GAIR-NLP/PC-Agent-E/archive/refs/heads/main.zip",
+              "path": "/home/user/Downloads/PC-Agent-E.zip"
+            }
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "/bin/bash",
+            "-c",
+            "cd /home/user/Downloads && unzip -q PC-Agent-E.zip && rm -rf PC-Agent-E.zip && mv PC-Agent-E-main PC-Agent-E"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code",
+            "/home/user/Downloads/PC-Agent-E"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": false,
+    "provide_info": [
+      "This is a file structure of this repository:\n",
+      "PC-Agent-E/assets/first_image.png",
+      "PC-Agent-E/assets/overview.png",
+      "PC-Agent-E/deploy/agent.py",
+      "PC-Agent-E/deploy/env.py",
+      "PC-Agent-E/deploy/main.py",
+      "PC-Agent-E/deploy/prompt.py",
+      "PC-Agent-E/deploy/utils.py",
+      "PC-Agent-E/LICENSE",
+      "PC-Agent-E/postprocess/boost.py",
+      "PC-Agent-E/postprocess/prepare.py",
+      "PC-Agent-E/postprocess/prompt.py",
+      "PC-Agent-E/postprocess/refinement.py",
+      "PC-Agent-E/postprocess/utils.py",
+      "PC-Agent-E/README.md",
+      "PC-Agent-E/scripts/server.sh",
+      "PC-Agent-E/train/sft.yaml"
+    ]
+  }
+  

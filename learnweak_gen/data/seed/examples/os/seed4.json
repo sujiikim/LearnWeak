@@ -1,0 +1,86 @@
+{
+    "id": "seed4",
+    "config_id": "config-3",
+    "instruction": "Compress all json files on the '/home/user/Downloads/SoT' directory into a zip file and set the password as 258369. Then create a new folder named \"zip\" in the Documents folder and put this compressed file into it. ",
+    "snapshot": "os",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://github.com/SimonAytes/SoT/archive/refs/heads/main.zip",
+              "path": "/home/user/Downloads/SoT.zip"
+            }
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "/bin/bash",
+            "-c",
+            "cd /home/user/Downloads && unzip -q SoT.zip && rm -rf SoT.zip && mv SoT-main SoT"
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; time.sleep(0.5); pyautogui.click(960, 540); time.sleep(0.5); pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(0.5)"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Terminal"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "os"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### File structure of this repository:\n",
+      "SoT/README.md",
+      "SoT/requirements.txt",
+      "SoT/pyproject.toml",
+      "SoT/LICENSE",
+      "SoT/.gitignore",
+      "SoT/sketch_of_thought/config/label_mapping.json",
+      "SoT/sketch_of_thought/config/warnings.py",
+      "SoT/sketch_of_thought/config/config.py",
+      "SoT/sketch_of_thought/config/prompts/DE/DE_ExpertLexicons_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/DE/DE_ConceptualChaining_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/DE/DE_ChunkedSymbolism_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/DE/DE_CoT_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/IT/IT_ChunkedSymbolism_SystemPrompt.md",    
+      "SoT/sketch_of_thought/config/prompts/IT/IT_ExpertLexicons_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/IT/IT_ConceptualChaining_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/IT/IT_CoT_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/EN/EN_ExpertLexicons_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/EN/EN_ConceptualChaining_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/EN/EN_ChunkedSymbolism_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/EN/EN_CoT_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/KR/KR_ChunkedSymbolism_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/KR/KR_ExpertLexicons_SystemPrompt.md",    
+      "SoT/sketch_of_thought/config/prompts/KR/KR_CoT_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/prompts/KR/KR_ConceptualChaining_SystemPrompt.md",
+      "SoT/sketch_of_thought/config/exemplars.json",
+      "SoT/sketch_of_thought/sketch_of_thought.py",
+      "SoT/sketch_of_thought/__init__.py"
+    ]
+  }
+  

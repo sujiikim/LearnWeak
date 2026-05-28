@@ -1,0 +1,27 @@
+{
+    "id": "config-0",
+    "snapshot": "gimp",
+    "config": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "gimp"
+          ]
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

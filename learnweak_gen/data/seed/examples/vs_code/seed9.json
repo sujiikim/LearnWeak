@@ -1,0 +1,46 @@
+{
+    "id": "seed9",
+    "config_id": "config-6",
+    "agentnet_id": "8029852a-68af-4775-8024-9a9d39763d86",
+    "instruction": "Help me modify the VS Code settings to darken unfocused editors and terminals, and set the opacity score of unfocused editors and terminals to 0.5",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/meituan/EvoCUA/refs/heads/main/show_result.py",
+              "path": "/home/user/show_result.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

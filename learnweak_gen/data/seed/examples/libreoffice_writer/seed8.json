@@ -1,0 +1,46 @@
+{
+  "id": "seed8",
+  "config_id": "config-4",
+  "snapshot": "libreoffice_writter",
+  "instruction": "Copy the first section “What is a report?” into a new document and save it as a PDF named “Report_Introduction”.",
+  "agentnet_id": "1420addc-df56-4962-b671-08672deb29a8",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/report-writing.docx",
+            "path": "/home/user/Desktop/report-writing.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/report-writing.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/report-writing.docx",
+    "What is a report?\nA report requires research, critical thinking about the research, academic language and in-text citations as evidence for your points. This is broadly the same process as for an essay yet with the following differences:\n•A report has a clear and easy to follow structure, with the inclusion of graphs, images, maps, tables where appropriate\n•A report generally includes the results of an investigation rather than answering a specific essay question\n•A report generally has a more defined focus as compared to an essay which requires you to interpret the question\nStructure\nYour assignment guidelines may specify what should be included within the report.\nSome suggestions on what a report could include:\n•Title Page including name and date\n•Table of contents indicates the structure of your report, showing the page number on which each section starts\n•Executive Summary a detailed summary of your report. It provides the same purpose as an abstract in a research paper. Sometimes your audience will only read your executive summary so it needs to stand alone and fully represent your work within the report\n•Main body must have Headings for example Background, Discussion, Conclusion, Recommendations\n•References with all academic work, and beyond, you are expected to acknowledge the sources used within your report using the appropriate referencing system\n•Appendices These should only be included when there is a requirement to enhance the information within the report. Referring to the appendix within your report is not meant to distract your reader; they may or may not choose to read the appendix.\nNOTE: Scientific reports may differ in that they could include an abstract, methods and materials and results.\n \nVisual communication\n•Reports can include a range of visual sources:\n•Tables\n•Graphs (line, bar, histogram)\n•Charts (bar, pie)\n•Photographs\n•Diagrams\n•Info-graphics\n•Maps and plans\n•Interviews and observations\nWhen using visual sources be mindful of copyright\nResearch/Evidence\nEnsure the evidence and tables/graphs/statistics used within the report are appropriate and are linked to the point you are making. Visual resources are meant to enhance the meaning of your sections and can be used to present complex information in an accessible format.\nTables and Figures\nConsecutive numbers are required for tables and figures e.g.\nFigure 1“Title”Page number\nFigure 2“Title”Page number\nFigure 3“Title”Page number\nLabels for tables go above the table, whereas labels for figures go below. Both need to include a brief description e.g. ‘Figure 2: Quarterly Administration Fees’\nLanguage style\nConcise, clear, accurate and formal language is required with appropriate technical terms when required.\nGenerally, avoid first person. Instead use third person or the passive voice.\nMostly, the use of the past tense is required as you will be reporting on something that has already happened. However, the present tense may be required if discussing the findings and recommendations.\n\n \n\n\n\nFurther advice and larger text guides can be found online: www.surrey.ac.uk/splash\nRevised 30/03/18\n \nLibrary & Learning Support Services\n\n"
+  ]
+}

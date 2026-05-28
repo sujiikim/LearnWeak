@@ -1,0 +1,31 @@
+{
+  "id": "seed0",
+  "config_id": "config-0",
+  "snapshot": "os",
+  "instruction": "Open the settings, search for \"time\", set the time format to 24 hours, then search for \"default application\", and set the web to Google",
+  "trajectory": "trajectories/",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    ""
+  ]
+}

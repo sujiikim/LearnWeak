@@ -1,0 +1,43 @@
+{
+  "id": "config-2",
+  "snapshot": "libreoffice_writter",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/Outline_COMP5422_FALL_2023.docx",
+            "path": "/home/user/Desktop/Outline_COMP5422_FALL_2023.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Outline_COMP5422_FALL_2023.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/Outline_COMP5422_FALL_2023.docx",
+    "COMP-5422-FA Computer Vision and Image Analysis\nDepartment of Computer Science \nFall 2023\nInstructor Information\nInstructor: Dr. Garima Bajwa\nOffice Location: AT5023\nTelephone: 807-342-8010\nE-mail: garima.bajwa@lakeheadu.ca\nOffice Hours: M/W; 1:00 PM - 2:30 PM or by appointment\nCourse Identification\nCourse Number: COMP-5422-FA\nCourse Name: Computer Vision and Image Analysis \nCourse Location: RB1047\nClass Times: M/W; 11:30 am to 1:00 pm\nPrerequisites: None\nCourse Description/Overview\nThis graduate level course focuses on fundamental concepts of computer vision, image processing and image analysis such as image/video perception, sampling and quantization, transforms, filtering, background and object segmentation, edge detection, feature extraction, shape representation and description, object tracking, classification, and popular machine learning techniques. The outcome of this course is that the students will be able to apply state-of-the-art techniques to some real applications. \nCourse Learning Objectives\nBy the end of this course, students will be able to identify basic concepts, terminology, theories, models and methods in the field of computer vision.\nSpecifically:\n- Understand the diverse topics from basic methods of computer vision related to image formation to processing such as convolution, edge detection and detection of other primitives, stereo, motion, and object recognition etc.\n- Understand the mathematical and scientific concepts applied in computer vision. \n- Understand the new research avenues in computer vision applications.\n- Propose and design of a computer vision system for a specific research problem.\n\nCourse Resources\nCourse Website(s)\n•D2L\nRequired Course Text\n•No required text \n•Richard Szeliski, Computer Vision: Algorithms and Applications.\n•Forsyth & Ponce, Computer Vision: A Modern Approach.\n•Gonzalez & Woods, Digital Image Processing.\n•Sonka, Hlavac, & Boyle, Image Processing, Analysis, and Machine Vision.\n•Strang, Linear Algebra and its Applications.\n•Selected research publications and course materials shared by researchers.\nCourse Schedule/Outline\nWeek 1 – Sept 6, Introduction\nWeek 2 – Sept 11-15, Image Formation\nWeek 3 – Sept 18-22, Image Processing\nWeek 4 – Sept 25-29, Image Processing/Feature Description\nWeek 5 – Oct 2-6, Feature Description and Detection \nWeek 6 – Oct 9-13, Fall Study Week, No classes\nWeek 7 – Oct 16-20, Ransac\nWeek 8 – Oct 23-27, Exam \nWeek 9 – Oct 30 – Nov 3, Stereo\nWeek 10 – Nov 6-10, Optical Flow\nWeek 11 – Nov 13-17, Machine Learning\nWeek 12 – Nov 20-24, Project Presentations\nWeek 13 – Nov 27-Dec 4, Project Presentations\n\n\n\nAssignments and Evaluations\nAssignment/TestDateValue\nAssignments (quiz/programs/theory)\tbi-weekly40%\nExam~week 8 \t20%\nProject \n  Proposal\n  Interim report \n  Presentation and demo\n  Final report and code\n\n~week 4\n~week 9\n~week 12\nFinals week\n40%\n\nLate Assignments\nLate submissions will be accepted two days late, with 10% penalty per day and will receive only half credit (50%) after that when turned in. In-class quizzes will not be accepted late. \nSubmissions will not be accepted after the last class. Any evidence of group participation will be interpreted as academic dishonesty unless it is a group challenge activity/handout.\nCourse Policies\nSubmission Policy: \nAssignments can be in the form of problem sets or quizzes or programming questions, with a due date posted on D2L.\n\nEmail Policy: \nPlease use only your Lakehead University email for all communication. Include your course title as a prefix in the subject line of your email [Template: COMP-5422-FA: {Subject}]. Send a reminder email if you do not get a response within 48 hours.\nCollaboration/Plagiarism Rules\nAvoid Plagiarism at all costs. Use citations for ideas that are not yours; Use quoted statements and references; Follow the Student Code of Conduct - Academic Integrity - SECTION III: VIOLATIONS OF THIS ACADEMIC INTEGRITY CODE IDENTIFYING OFFENCES (BREACHES OF ACADEMIC INTEGRITY). \nIf you have any questions, please reach out to me for clarification.\nAdditionally, posting any course materials (assignments, quizzes, exams, presentations, lecture recording, supplementary resources) to third-party websites without permission is prohibited.\nUniversity Policies\nAccommodation for Students with Disabilities: \nLakehead University is committed to achieving full accessibility for persons with disabilities. Part of this commitment includes arranging academic accommodations for students with disabilities to ensure they have an equitable opportunity to participate in all their academic activities. If you think you may need accommodations, you are strongly encouraged to contact Student Accessibility Services (SAS) and register as early as possible. For more information, please visit: http://studentaccessibility.lakeheadu.ca\n\n"
+  ]
+}

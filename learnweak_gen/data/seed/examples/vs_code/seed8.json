@@ -1,0 +1,46 @@
+{
+    "id": "seed8",
+    "config_id": "config-6",
+    "agentnet_id": "9972cf88-2e03-491d-92e8-b3d6001d6250",
+    "instruction": "Create a new python file in VS Code, write the code to calculate the sum of all numbers from 1 to 100, save the file to the Desktop folder with the name \"sum100.py\", and run the code.",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/meituan/EvoCUA/refs/heads/main/show_result.py",
+              "path": "/home/user/show_result.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

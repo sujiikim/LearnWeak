@@ -1,0 +1,35 @@
+{
+    "id": "seed1",
+    "config_id": "config-0",
+    "agentnet_id": "054374a8-ffa2-4acf-9f1e-7c11f2b2d66a",
+    "instruction": "Please help me set the default tab size in VS Code to 2 spaces and change the default cursor style to \"block\".",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

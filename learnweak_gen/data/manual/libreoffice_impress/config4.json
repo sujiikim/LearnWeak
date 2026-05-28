@@ -1,0 +1,43 @@
+{
+  "id": "config-4",
+  "snapshot": "libreoffice_impress",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/moving-the-business-forward-with-digital-transformation.pptx",
+            "path": "/home/user/Desktop/moving-the-business-forward-with-digital-transformation.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/moving-the-business-forward-with-digital-transformation.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/moving-the-business-forward-with-digital-transformation.pptx",
+    "Slide 1:\nData Center Innovation Day\n\nSlide 2:\nJarut Nakaramaleerat\nData Centre Sales Manager , Cisco Systems\nOct 2018\nMoving the business forward with Digital Transformation\n\nSlide 3:\nDigital transformation is the new normal\nBig and Fast Data\nVirtualization\nExpanded attack surface\nIncrease in east-west traffic\nHybrid Cloud\nOrchestration and management\nWorkload portability\nZero trust model\nApplication Modernization\nContinuous development | Micro Services | APIs\n\nSlide 4:\nConsumer simplicity\nTechnology has changed how we shop, bank, and plan vacations all on our phones or laptops.\nIT operational complexity\nData Centers have to deliver with no room for error or downtime to support these innovations.\n\nSlide 5:\nMeeting the demands of business\nTime is money\nZero downtime\n\nSlide 6:\nThe future of IT could be simpler\n\"By 2022, nearly 40% of operational processes will be self-healing and self-learning – minimizing the need for human intervention or adjustments.\"\nIDC 3rd Platform\nDigital Transformation Prediction\n\nSlide 7:\nIt’s been an evolutionary journey\nCisco Intersight\nAI powered ITOM\nCloud-based policy orchestration\nCisco UCS Director\nFull lifecycle management\n3rd party policy orchestration\nCisco UCS\nStateless computing\nResource policy automation\nCisco Tetration\nML powered analytics\nSecurity policy automation\nCisco ACI\nFully integrated SDN\nApplication Policy automation\nCisco NAE\nML powered state awareness\nContinuous policy compliance\nAll industry first systems innovations\n2018\n2009\n\nSlide 8:\nGroundbreaking\nService Delivery\n\nSlide 9:\nUnlimited ITOM capability with Cloud SaaS\nCisco Intersight\nInfrastructure-as-a-Service and Orchestration\nThird Party Integrations: Infrastructure and Toolchains\nGlobal Resource Pooling \nand Policy Management\nPolicy-Based Automation\nUnified Element Management\nUCS Capabilities Today\nSaaS Consumption Model\nFree customers from care and feeding of management tools and eliminate upgrade dependencies\nSeamless Extensibility\nSimplify management across technologies and geography\nContinuous \nFeature Integration\nRapid development, delivery and customer feedback\nSaaS Model\nCisco-Hosted Cloud\nCustomer-Hosted Cloud\nPartner-Hosted Cloud\nTraditional Delivery Model\nOn-prem software and\nHW-embedded tools\n\nSlide 10:\nWe’ve set the stage for AI Operations\nSimplicity\nAgility\nEfficiency\nScale\nIntuitive\nAdaptive\nAutomated\nSemi-Automated\nManual\nTraditional\nTools\nCisco UCS\nCisco UCS\nDirector\nInflection Point\nCloud Managed Infrastructure\nML / AI for IT Ops\nPast\nFuture\nCisco\nIntersight\n\nSlide 11:\nMove fast without breaking things\n\nSlide 12:\nCisco Tetration\nNetwork Assurance Engine\nApplication-Centric Infrastructure\nActivation\nOrchestrate policies and configure systems\nTranslation\nCapture intent, translate to policy, and check integrity\nAssurance\nContinuous verification, insights and visibility, and corrective actions\nIntent-Based Networking is the future\nCisco Data Center\nIntent-Based\nNetworking\n\nSlide 13:\nNetwork policy that goes where you go\nEdge Site A\nData Center B\nData Center A\nACI Multi-Site Appliance\nBare Metal Cloud B\nPublic Cloud A\nPublic Cloud B\nACI vPOD\nACI Anywhere\nACI Anywhere\nACI Anywhere\nConsistent Network and Policy across clouds\nSeamless \nWorkload Migration\nSingle Point \nof Orchestration\nSecure  Automated Connectivity\nACI Remote Leaf\nACI Site A\nACI Site B\n\nSlide 14:\nIt’s all about\nthe applications\n\nSlide 15:\nWorkload that manage themselves\nDynamic Workload Optimization\nAutomatically allocate resources to the workloads that need them the most,\nIncrease infrastructure efficiency\nAutomatically maximize workload density \nand resource utilization, minimizing\nWorkload Management\nAutomatically place, size, and move workloads while always maintaining\nWorkload Optimization Manager\n\nSlide 16:\nKeeping up with the pace of business\nPutting you in control of your multicloud\nAgile workload deployments\nIncreased control, avoid cloud lock-in\nWorkload performance monitoring\nReal time visibility into app performance\nOptimized end user experience\nCisco Cloud Center\nAppDynamics\nIT as a strategic business enabler\n\nSlide 17:\nWhat to expect\n\nSlide 18:\nHow automation can help you\nIncreased agility\nLower operating costs\nFaster incident response\nClosing the skills gap\nMinimize operational risk\nOptimal app performance\n\nSlide 19:\n99.7% faster\nVM provisioning\nIt’s Data Center automation that delivers\nFaster network provisioning\nRecovered\n4200 vCPUs and \n52TB of memory\nADM & white list security adoption\n$Target\n$35M\nReduced time\n58%\nIDC: Cisco IT\nWithin one night\n10-minutes\n3-days\nVM provisioning time\nPublic: San Joaquin County\nCisco UCS\nCisco ACI\nCisco WOM\nCisco on Cisco IT\nCisco Tetration & ACI\nCisco on Cisco IT\n\nSlide 20:\nThe Cisco difference\nTransformational\nExpert Services\nSimplification\nBridging the gap between business and IT\nAccelerating your Data Center transformation\nBreaking down siloes. No technology religion.\n\nSlide 21:\n\n"
+  ]
+}

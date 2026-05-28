@@ -1,0 +1,43 @@
+{
+  "id": "config-6",
+  "snapshot": "libreoffice_writter",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/Analysis_101_DTM.docx",
+            "path": "/home/user/Desktop/Analysis_101_DTM.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Analysis_101_DTM.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/Analysis_101_DTM.docx",
+    "Analysis 101 – Levels of Analysis - DTM & Partners\n\nAnalysis in humanitarian setting refers to the organized and collaborative process of transforming raw data into actionable insights for better decision-making. It is an iterative sense-making process which continues until it is possible to draw conclusions that answer the original questions, with a reasonable degree of certainty. The goal of DTM sector data analysis is to provide informed opinions about gaps, underlying factors, adaptive strategies and existing or forecasted humanitarian conditions. This includes a systematic set of procedures undertaken for the purposes of setting priorities based on severity of gaps or risks faced by the affected population. \n\nAnalysis is more of a process than an action, and there are procedures and steps Cluster/AoRs staff can rely on to take them from uncertainty to understanding, from results to findings. Most forms of analysis can be described as levels, where one builds on another, each increasing the understanding of the findings and revealing progressively what the data means, what may happen next and what could or should be done about it. Five levels are commonly used for analysis of humanitarian needs, represented in the diagram below. \n\n•Explanatory analysis looks for associations, correlations and more generally for connections between observations and measurements. It is an extension of the descriptive phase and allows for formulation of better hypothesis or theories, based on careful investigation of relationships, underlying processes or causal mechanisms. Identifying relationships is an important part of the analytic process because it prepares for moving from a simple description of the population conditions and settings to explanations of why and how things happened as they did, and what could happen in the future if conditions persist or change. This level of analysis implies carefully connecting the dots and assessing whether two or more variables, conditions or observations vary according to a pattern, the strength of the relationship linking them and if one is cause of or contributor to another. In this analytical step, the Cluster/AoR IMO, subject–matter and cultural/context experts (e.g., coordinators, members, local staff and NGOs…) identify and rank main underlying mechanisms/barriers/factors (problems of access, availability, use, quality and awareness of/to basic goods and services) that contribute to the existence of persistence of humanitarian conditions, i.e. problems of physical and mental wellbeing). This analysis is critical as it allows to identify the causes of current conditions, which should be addressed during the response. The goal of explanatory analysis is:\n•To go beyond the nature and frequency of the problems and identify factors or conditions that contribute to the existence, aggravation or continuation of an issue\n•To identify changes and patterns of associations or correlation and explore the strength of the relationships between observations\n•To clarify causal mechanisms, underlying processes and functions at play\n•To provide a foundation and groundwork for forecasting and prescriptive analysis\n\n•Interpretive analysis aims at moving beyond findings to identify key messages and drawing well-supported conclusions, through careful argumentation, evaluation of the strength of evidence available and attention to plausibility in context. While the previous analysis steps focused mainly on understanding what happened and what the data say, interpretation is primarily interested in what it means for the decision makers and articulating credible, coherent and meaningful conclusions. Interpretation highlights important messages in relation to the original research question, assessing the degree of certainty attached to the final conclusions and answering the question “so what?”. In this analytical step, Cluster/AoR experts discuss the results produced by the IMO and establish critical gaps and humanitarian conditions and set priority geographical areas for further assessments. They also evaluate the body of evidence to assess the strength of the evidence, express their degree of confidence in the findings and identify information gaps. The goal of interpretive analysis is:\n•Determining what is important (severity of gaps and priorities) and why it is important (size of population exposed to gaps)\n•Building coherent, reasoned and well supported conclusions\n•Evaluating the evidence that supports conclusions and contextualizing the findings to assess their plausibility\n\n•Anticipatory analysis identifies the likelihood of future events and outcomes at a specific time, based on current and historical data. It combines predictions (a one-off estimate of a specific event in the future – What will happen?) and forecast (a set of possible futures that include probability estimates of occurring – What else might happen?). Predicting and forecasting are an integral part of scenario building and risk analysis that will also inform preparedness activities. In this analytical step and based on secondary data and risk analysis, Cluster/AoRs IMO and experts discuss relevant scenario, estimate future potential gaps and refine the list of priority geographical areas if necessary, e.g. in case of further influx of IDPs into a particular geographical area. The specific objectives of anticipative analysis are to:\n•Go beyond current conditions and provide forward looking assessment and best estimates on what might happen in the future (in opposition to what will happen in the future).\n•Prolong the shelf-life of the analysis by integrating a forward-looking perspective into the analysis of the current situation.\n\n•Prescriptive analysis entails both response analysis and planning. This process is generally conducted in a workshop setting and uses results from both secondary and primary data collection. In this step, cluster/AoRs IMO and experts discuss and agree on a strategy and objectives to change or prevent humanitarian conditions and recommend a set of appropriate and proportionate response options (this process is also called response analysis). They define the activities and resources required to achieve the objectives (response planning) and any risks or assumptions. The goal of prescriptive analysis is to:\n•Define strategic objectives and targets geographical areas/groups, so as to reduce current and forecasted humanitarian consequences or deficiencies\n•Identify, screen and select potential response options or the set of interventions considered to solve a particular gap or deficiency\n•Plan programmes, activities and strategic recommendations for response\n•Recommendations regarding further or more in-depth sectoral assessments\n"
+  ]
+}

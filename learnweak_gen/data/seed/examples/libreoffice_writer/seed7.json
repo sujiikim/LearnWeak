@@ -1,0 +1,46 @@
+{
+  "id": "seed7",
+  "config_id": "config-3",
+  "snapshot": "libreoffice_writter",
+  "instruction": "Set the top margin to 0.56 inches, rotate all document content by 270°, adjust character spacing to 1.99pt, and save.",
+  "agentnet_id": "41e09a02-bcdd-4a88-8fba-33277a93faf3",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/optimizing_image_segmentation.docx",
+            "path": "/home/user/Desktop/optimizing_image_segmentation.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/optimizing_image_segmentation.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/optimizing_image_segmentation.docx",
+    "Optimizing Image Segmentation and Filter Application\nL. Berman\n1. Neural Engineering Data Consortium, Temple University, Philadelphia, Pennsylvania, USA\nleo.berman@temple.edu \nAbstract— Fast image segmentation and processing plays a vital role in the efficient processing of tissue slide images. This has a particularly interesting use case of being leveraged in artificial intelligence systems. The goal is to reduce overhead spent on I/O time, speed up memory transfer to GPU, and reduce computation time spent on applying filters/computing histograms. \nI. INTRODUCTION\nThe dataset being used is a pool of 3,505 Slide and Viewable Storage (SVS) images (~3.5 terabytes). An example image is shown below in Fig: 1.\n \nFig: 1: Example Image\nWe first want to segment these images into 256x256 pixel windows with 50% overlap with their neighbor to increase smoothing and add context. The effects of this smoothing in Fig 2.\n \nFig 2: Example of smoothing filter\nOnce we have the windows generated, we need to blur the frame individually with a Gaussian Blurring filter of kernel size three as shown in Fig 3.\n \nFig 3: Example of Gaussian Blurring [1]\n\u2003\nTo implement this, we first need to calculate a 2D kernel with radius three of a Gaussian distribution shown in Equation 1 where standard deviations are dictated by distance to the center of the kernel.\nEquation 1: Gaussian Distribution\n \nAfter we have applied a Gaussian blurring filter, we need to perform a 2D Fast Fourier Transform (FFT) on each individual channel of the RGB images. In order to do this, we need to first perform a 1D FFT as shown in Equation 2 on one axis of  the 2D matrixes, then perform another 1D FFT on the other axis of the 2D matrixes.\nEquation 2: 1D FFT Equation\n \nFinally, we need to calculate the magnitude of the complex numbers that came as a result of the previous 2D FFT.\nII. IMPLEMENTATION CHALLENGES\nThere are 3 major challenges we must work through. First, we must read the images in segments. Second, we get those segments from the CPU into the GPU. Finally, we perform the filtering.\nTo efficiently address these issues, its important that we perform them all concurrently to minimize downtime between tasks. As I/O was the largest bottleneck, it is vital that we are constantly running asynchronous reads on the images. We then take from the pool of reads as we need to fill the GPUs and focus on using as many blocks and threads as possible in the GPUs. Maximizing parallelization typically means maximizing performance. We also have to watch out for data being accessed out of order. For example, for 2D FFTs we can’t perform the second FFT until we have the results in for the first FFT. My final approach was to have separate Python tasks that would queue the segment reading for an entire image, take from the pool to load up the GPUs while continuing to read. Perform the operation. Deallocate the memory after loading histogram results onto the CPU. Then retake from pool and send it to the GPU. Repeat this until the image is read, and write the histogram for that image to disk. Finally, a Python command that is monitoring the written histograms will sum them all at completion. This allows us to run code not only concurrently across multiple GPUs but also across multiple clusters.\nIII. SUMMARY\nOverall, this project was a great learning experience on how to program GPUs when approaching from the right angle. However, the project was mostly I/O bound and performance increases in practical applications may be limited. However, if the computation was complex enough, the ability to make these improvements could be vital to the success of a project’s outcome. In some cases, utilizing off-the-shelf libraries can improve performance, but by programming GPU code with intention, we can increase performance and maximize utilization. While the results are inconclusive, I believe that with some debugging, the time to process a single image across 16 GPUs could be as low as 30 seconds.\nACKNOWLEDGMENTS\nThank you to Lucas Raab for dealing with all environment issues on the cluster and Dr. Picone for spearheading this project and providing the resources to experiment on an abundance of compute resources.\nREFERENCES\n\n[1] \tA. Sharda, \"Image Filters: Gaussian Blur,\" Medium, 21 January 2021. [Online]. Available: https://aryamansharda.medium.com/image-filters-gaussian-blur-eb36db6781b1. [Accessed 16 12 2024].\n\n"
+  ]
+}

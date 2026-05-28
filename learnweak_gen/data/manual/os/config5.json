@@ -1,0 +1,73 @@
+{
+  "id": "config-5",
+  "snapshot": "os",
+  "trajectory": "trajectories/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/moving-the-business-forward-with-digital-transformation.pptx",
+            "path": "/home/user/Downloads/moving-the-business-forward-with-digital-transformation.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/BONO-ROSSA.pptx",
+            "path": "/home/user/Downloads/BONO-ROSSA.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/GEP-June-2024-Presentation.pptx",
+            "path": "/home/user/Downloads/GEP-June-2024-Presentation.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/test-images/png/refs/heads/main/202105/ia-installing.png",
+            "path": "/home/user/Downloads/installing.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    ""
+  ]
+}

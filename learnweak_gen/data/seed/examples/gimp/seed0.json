@@ -1,0 +1,30 @@
+{
+    "id": "seed0",
+    "config_id": "config-0",
+    "snapshot": "gimp",
+    "instruction": "Create a new white canvas, use the free selection tool to select a triangle, fill it with black color, and then save it as \"triangle.png\" on the desktop.",
+    "agentnet_id": "01963da1-7d1a-46ee-8cd8-706e25c0a569",
+    "config": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "gimp"
+          ]
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

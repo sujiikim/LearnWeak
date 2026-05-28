@@ -1,0 +1,55 @@
+{
+    "id": "seed6",
+    "config_id": "config-4",
+    "agentnet_id": "",
+    "instruction": "Open \"/home/user/computer_use/inference_test. py\" in VS Code, replace all \"height\" in the file with \"h\" and \"width\" with \"w\".",
+    "config": [
+      {
+        "type": "command",
+        "parameters": {
+          "command": [
+            "mkdir",
+            "-p",
+            "/home/user/computer_use"
+          ]
+        }
+      },
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/bytedance/UI-TARS/refs/heads/main/codes/tests/inference_test.py",
+              "path": "/home/user/computer_use/inference_test.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

@@ -1,0 +1,47 @@
+{
+  "id": "seed5",
+  "config_id": "config-5",
+  "instruction": "In the VLC interface, help me change the shortcut key to turn up the volume to \"2\" and the shortcut to turn down the volume to \"3\".",
+  "agentnet_id": "bcab9658-238e-49b7-89e0-390b74f71fbb",
+  "snapshot": "base_setup",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/meituan-longcat/LongCat-Video/refs/heads/main/assets/motorcycle.mp4",
+            "path": "/home/user/Desktop/motorcycle.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show --start-time=15 '/home/user/Desktop/motorcycle.mp4'",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low"
+}

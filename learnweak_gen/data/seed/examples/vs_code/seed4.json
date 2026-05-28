@@ -1,0 +1,65 @@
+{
+    "id": "seed4",
+    "config_id": "config-2",
+    "agentnet_id": "",
+    "instruction": "In this project, modify the version of torch to '2.9.0' in the 'requirements.txt' file, and add the \"print(step)\" code in the 53rd line.",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "command",
+        "parameters": {
+          "command": [
+            "mkdir",
+            "-p",
+            "/home/user/Workspace/src"
+          ]
+        }
+      },
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/model/requirement.txt",
+              "path": "/home/user/Workspace/requirements.txt"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/evaluation/agentnetbench/agent/aguvis.py",
+              "path": "/home/user/Workspace/aguvis.py"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/data/data-process/src/utils/image.py",
+              "path": "/home/user/Workspace/src/image.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code",
+            "/home/user/Workspace/"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

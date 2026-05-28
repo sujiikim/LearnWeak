@@ -1,0 +1,28 @@
+{
+    "id": "seed3",
+    "config_id": "config-2",
+    "instruction": "Open the system settings, change the alert sound to \"Sonar\", and then modify the default music program to \"VLC media player\".",
+    "snapshot": "os",
+    "config": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": "mkdir -p /home/user/Project/Project1",
+          "shell": true
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "os"
+    ],
+    "evaluator": {
+        "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

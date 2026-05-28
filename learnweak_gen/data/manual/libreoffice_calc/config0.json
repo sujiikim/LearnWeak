@@ -1,0 +1,52 @@
+{
+    "id": "config-0",
+    "snapshot": "libreoffice_calc",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/ACCOUNT_INFO.xlsx",
+              "path": "/home/user/ACCOUNT_INFO.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/ACCOUNT_INFO.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+        "### Content of ACCOUNT_INFO.xlsx",
+        "Sheet 1: Sheet1",
+        "- Range: Rows 1~12 / Columns A~D (4 columns)",
+        "- Columns: account_number | branch_number | country | AMOUNT",
+        "All data of this sheet:",
+        "account_number\tbranch_number\tcountry\tAMOUNT",
+        "10248\t11\tBelgium\t6493",
+        "10248\t42\tBelgium\t18764",
+        "10248\t72\tUSA\t14755",
+        "10249\t14\tUSA\t3705",
+        "10249\t51\tFinland\t13783",
+        "10250\t41\tUSA\t6283",
+        "10250\t51\tUK\t2912",
+        "10250\t65\tFinland\t18153",
+        "10251\t22\tUSA\t16848",
+        "10251\t57\tNorway\t5708",
+        "10251\t65\tUSA\t14218"
+    ]
+  }

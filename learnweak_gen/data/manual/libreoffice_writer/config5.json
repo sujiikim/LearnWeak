@@ -1,0 +1,43 @@
+{
+  "id": "config-5",
+  "snapshot": "libreoffice_writter",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/sample-tables.docx",
+            "path": "/home/user/Desktop/sample-tables.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/sample-tables.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/sample-tables.docx",
+    "Sample Demographic Characteristics Table\nTable 1\nSociodemographic Characteristics of Participants at Baseline \nBaseline characteristicGuided self-help \tUnguided self-help(Wait-list controlFull sample\n\tn%\tn%\tn%\tn%\nGender\n\u2003Female25 \t5020 \t4023 \t466845.3\n\u2003Male2550306027548254.7\nMarital status\n\u2003Single1326112217344127.3\n\u2003Married/partnered35703876285610167.3\n\u2003Divorced/widowed12124864.0\n\u2003Other11001221.3\nChildren a2652265222447449.3\nCohabitating3774367226529966.0\nHighest educational level\n\u2003Middle school00121221.3\n\u2003High school/some college2244173413265234.7\n\u2003University or postgraduate degree2754306032648959.3\nEmployment\n\u2003Unemployed3651024106.7\n\u2003Student816714361812.0\n\u2003Employed3060295840809966.0\n\u2003Self-employed9187145102114.0\n\u2003Retired00240021.3\nPrevious psychological treatment a1734183624485939.3\nPrevious psychotropic medication a612132611223020.0\nNote. N = 150 (n = 50 for each condition). Participants were on average 39.5 years old (SD = 10.1), and participant age did not differ by condition.\na Reflects the number and percentage of participants answering “yes” to this question.\n\n\u2003\nSample Results of Several t Tests Table\nTable 2\nResults of Curve-Fitting Analysis Examining the Time Course of Fixations to the Target\nLogistic parameter9-year-olds16-year-oldst(40)\tpCohen’s d\n\tMSDMSD\nMaximum asymptote, proportion.843.135.877.0820.951.3470.302\nCrossover, in ms \t75987694422.877.0060.840\nSlope, as change in proportion per ms.001.0002.002.00022.635.0122.078\nNote. For each subject, the logistic function was fit to target fixations separately. The maximum asymptote is the asymptotic degree of looking at the end of the time course of fixations. The crossover point is the point in time the function crosses the midway point between peak and baseline. The slope represents the rate of change in the function measured at the crossover. Mean parameter values for each of the analyses are shown for the 9-year-olds (n = 24) and 16-year-olds (n = 18), as well as the results of t tests (assuming unequal variance) comparing the parameter estimates between the two ages.\n\u2003\nSample Correlation Table\nTable 1\nDescriptive Statistics and Correlations for Study Variables\nVariablenMSD1234567\n1. Internal–external status a3,6970.430.49—\n2. Manager job performance2,1343.140.62−.08**\t—\n3. Starting salary b3,6971.010.27.45**\t−.01—\n4. Subsequent promotion3,6970.330.47.08**\t−.07**\t.04*\t—\n5. Organizational tenure3,6976.456.62−.29**\t.09**\t.01.09**\t—\n6. Unit service performance c3,50585.006.98−.25**\t−.39**\t.24**\t.08**\t.01—\n7. Unit financial performance c69442.615.86.00−.03.12*\t−.07−.02.16**\t—\na 0 = internal hires and 1 = external hires.\nb A linear transformation was performed on the starting salary values to maintain pay practice confidentiality. The standard deviation (0.27) can be interpreted as 27% of the average starting salary for all managers. Thus, ±1 SD includes a range of starting salaries from 73% (i.e., 1.00 – 0.27) to 127% (i.e., 1.00 + 0.27) of the average starting salaries for all managers.\nc Values reflect the average across 3 years of data.\n*p < .05. **p < .01.\n\n\n"
+  ]
+}

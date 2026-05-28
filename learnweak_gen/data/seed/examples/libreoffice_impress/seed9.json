@@ -1,0 +1,45 @@
+{
+  "id": "seed9",
+  "config_id": "config-6",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Insert a blank table with 6 columns and half the number of rows as the columns in the body text box of the last slide.",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/main/libreoffice_impress/Matt-MacLachlan-AOF_Presentation_2022.pptx",
+            "path": "/home/user/Documents/Matt-AOF_Presentation_2022.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Documents/Matt-AOF_Presentation_2022.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Documents/Matt-MacLachlan-AOF_Presentation_2022.pptx",
+    "Slide 1:\nFood Price Outlook\nMatthew MacLachlan\nUSDA - Economic Research Service\n2022 USDA Agricultural Outlook Forum\nFebruary 24th – 25th, 2022\n\nSlide 2:\nOutline\nOverview of consumer spending on food\nFood price trends over time\nFood prices in 2021\n2022 food price forecasts in (recent) historical context\nNext Food Price Outlook release\nAdditional ERS Publications\n\nSlide 3:\nMost information available on ERS website\nFood Price Outlook Monthly Report\nInteractive visualizations\nCharting the Essentials\nCharts of Note\n\nSlide 4:\nU.S. consumers spent about 12% of expenditures on food in 2020\nBased on BLS Consumer Expenditure Survey Data\n\nSlide 5:\nFood expenditure share (~12%) similar to historical average\n\nSlide 6:\nFood price inflation over past 5 years:\nBelow housing and transportation\nSlightly above overall inflation\n\nSlide 7:\nConsumer spending differs across food categories\nCPI weighting reflects these differences\n\nSlide 8:\nERS reports detailed food subcategories\n\nSlide 9:\nFood at home vs. food away from home:\nDifferent price growth patterns\nMore similar during pandemic\n\nSlide 10:\nRetail food price changes in 2021\nSignificant increases observed\n\nSlide 11:\nExamples of 2021 price increases:\n+9.3%\n+8.6%\n\nSlide 12:\nSome categories had smaller increases (e.g., ~1.1%)\n\nSlide 13:\nKey factors for 2022:\nPandemic-related changes\nVariants and vaccination\nSupply chains\nInternational trade\nU.S. economy\n\nSlide 14:\n2022 food price inflation forecast:\n2% – 3%\n\nSlide 15:\nMeat prices:\nSharp increase early pandemic\nAnother rise in late 2021\n\nSlide 16:\nFood away from home:\nFaster price growth than usual\nForecast increase: 3.5% – 4.5% (2022)\n\nSlide 17:\nTakeaways:\n2021:\nHigh food price inflation\nMeat prices increased most\nAll categories increased (vegetables least)\n2022:\nContinued uncertainty\nFood prices +2–3%\nFood away from home +3.5–4.5%\n\nSlide 18:\nFuture updates:\nFood Price Outlook updated regularly\nCovers current and next year forecasts\nIncludes farm, wholesale, retail categories\n\nSlide 19:\nERS additional datasets:\nFood Dollar Series\nFood Expenditure Series\nFarm-to-consumer price spreads\n\nSlide 20:\nAdditional ERS resources:\nAmber Waves\nCharts of Note\nCharting the Essentials\nEmail subscription available\n\nSlide 21:\nThank you\nMatthew MacLachlan\nUSDA Economic Research Service\nContact: Matthew.MacLachlan@usda.gov :contentReference[oaicite:0]{index=0}"
+  ]
+}

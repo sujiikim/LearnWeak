@@ -1,0 +1,39 @@
+{
+    "id": "config-2",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://t4.ftcdn.net/jpg/02/36/94/89/360_F_236948910_kfjLWwmxgacen9r4uLHLpg2uLqhC7oti.jpg",
+            "path": "/home/user/Desktop/fried_chicken.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/fried_chicken.jpg"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

@@ -1,0 +1,69 @@
+{
+    "id": "config-2",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "command",
+        "parameters": {
+          "command": [
+            "mkdir",
+            "-p",
+            "/home/user/Workspace/src"
+          ]
+        }
+      },
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/model/requirement.txt",
+              "path": "/home/user/Workspace/requirements.txt"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/evaluation/agentnetbench/agent/aguvis.py",
+              "path": "/home/user/Workspace/aguvis.py"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/xlang-ai/OpenCUA/refs/heads/main/data/data-process/src/utils/image.py",
+              "path": "/home/user/Workspace/src/image.py"
+            }
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code",
+            "/home/user/Workspace/"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Code of /home/user/Workspace/requirements.txt",
+      "transformers==4.53.0\ntorch==2.8.0\npillow==11.3.0\ntiktoken==0.11.0\nblobfile==3.0.0\naccelerate==1.10.0\nopenai>=1.0.0\n",
+      "### Code of /home/user/Workspace/aguvis.py",
+      "#!/usr/bin/env python3\nimport os\nimport base64\nimport re\nfrom typing import Dict, List, Tuple, Any, Optional\n\nfrom .base_agent import BaseAgent\n\n# Constants merged from constant_l2_action_history.py\nSYSTEM_PROMPT = \"\"\"You are a GUI agent. You are given a task and a screenshot of the screen. You need to perform a series of pyautogui actions to complete the task.\"\"\"\n\nINSTRUCTION_PROMPT = \"\"\"\nPlease generate the next move according to the UI screenshot, instruction and previous actions.\n\nInstruction: {high_level_instruction}\n\nPrevious actions:\n{previous_im}\"\"\"\n\nINNERMOLOGUE = \"\"\"Thought: {thought}\nAction: {low_level_instruction}\"\"\"\n\nHISTORY_INNERMOLOGUE = \"\"\"{low_level_instruction}\"\"\"\n\n# Code merged from model_l2_action_history.py\nMAX_RETRIES = 3\n\nclass Aguvis(BaseAgent):\n    \"\"\"AguVis agent implementation.\"\"\"\n    \n    def __init__(self, model: str, client: Any):\n        \"\"\"Initialize the AguVis agent.\n        \n        Args:\n            model: The model identifier to use for predictions\n            client: The client object for making API calls\n        \"\"\"\n        super().__init__(model, client)\n        self.system_prompt = SYSTEM_PROMPT\n\n    def prompt(self, trajectory: Dict[str, Any], current_step: int) -> List[Dict[str, Any]]:\n        \"\"\"Generate prompt for the agent.\n        \n        Args:\n            trajectory: The full trajectory data\n            current_step: The current step index being processed\n            \n        Returns:\n            List of message dictionaries for the model\n        \"\"\"\n        # Get current step data\n        step = trajectory['steps'][current_step]\n        \n        # Build previous actions string\n        previous_actions = []\n        for i in range(current_step):\n            prev_step = trajectory['steps'][i]\n            if 'inner_monologue' in prev_step:\n                previous_actions.append(f\"Step {i+1}: {prev_step['inner_monologue'].get('low_level_instruction', '')}\")\n        previous_actions_str = \"\n\".join(previous_actions) if previous_actions else \"None\"\n\n        # Create instruction prompt\n#         instruction_prompt = f\"\"\"\n# Please generate the next move according to the UI screenshot, instruction and previous actions.\n\n# Instruction: {trajectory['user_task_description']}\n\n# Previous actions:\n# {previous_actions_str}\"\"\"\n\n        instruction_prompt = f\"\"\"\nPlease generate the next move according to the UI screenshot, instruction and previous actions.\n\nInstruction: {trajectory['high_level_task_description']}\n\nPrevious actions:\n{previous_actions_str}\"\"\"\n        \n        append_text = \"\"\"<|recipient|>all\n\nThought: \"\"\"\n        # Load and encode image\n        image = self.load_image(step['image'], self.image_dir)\n        image_b64 = base64.b64encode(image).decode('utf-8')\n\n        # Build messages\n        messages = [\n            {\"role\": \"system\", \"content\": self.system_prompt},\n            {\"role\": \"user\", \"content\": [\n                {\"type\": \"image_url\", \"image_url\": {\"url\": f\"data:image/png;base64,{image_b64}\"}},\n                {\"type\": \"text\", \"text\": instruction_prompt}\n            ]},\n            {\"role\": \"assistant\", \"content\": append_text}\n        ]\n        \n        return messages\n\n    def parse_response(self, response: str, trajectory: Optional[Dict[str, Any]] = None, step_idx: Optional[int] = None) -> str:\n        \"\"\"Parse the raw response from the agent into executable form.\n        \n        Args:\n            response: Raw response string from the model\n            trajectory: Optional trajectory data (unused)\n            step_idx: Optional step index (unused)\n            \n        Returns:\n            Parsed response string ready for evaluation\n        \"\"\"\n        if response is None:\n            return None\n            \n        # Split response into lines\n        lines = response.strip().split(\"\n\")\n        lines = [line for line in lines if line.strip()]\n        \n        # Find the action line\n        action_line = None\n        for line in lines:\n            if line.strip().startswith(\"pyautogui\") or line.strip().startswith(\"computer.\"):\n                action_line = line.strip()\n                break\n        \n        return action_line\n\n    def extract_actions(self, action: str) -> List[Tuple[str, Any]]:\n        \"\"\"Extract individual actions from parsed response.\n        \n        Args:\n            action: Parsed action string\n            \n        Returns:\n            List of tuples containing (action_type, action_params)\n        \"\"\"\n        if not action:\n            return []\n            \n        actions = []\n        \n        # Handle computer.terminate\n        if action.startswith(\"computer.terminate\"):\n            status_match = re.search(r\"status=['\"](\\w+)['\"]\", action)\n            if status_match:\n                return [(\"terminate\", status_match.group(1))]\n            return []\n            \n        # Handle pyautogui actions\n        if action.startswith(\"pyautogui.\"):\n            # Extract coordinates for click/moveTo actions (tolerate spaces around '=')\n            coord_match = re.search(r\"x\\s*=\\s*([\\d.]+)\\s*,\\s*y\\s*=\\s*([\\d.]+)\", action)\n            if coord_match:\n                x, y = map(float, coord_match.groups())\n                if \"click\" in action:\n                    actions.append((\"click\", (x, y)))\n                elif \"moveTo\" in action:\n                    actions.append((\"moveTo\", (x, y)))\n                elif \"doubleClick\" in action:\n                    actions.append((\"doubleClick\", (x, y)))\n                    \n            # Handle scroll action with page parameter\n            scroll_page_match = re.search(r\"scroll\\(page=([-\\d.]+)\\)\", action)\n            if scroll_page_match:\n                # Use default coordinates if not specified\n                default_coords = (0.5, 0.5)\n                actions.append((\"moveTo\", default_coords))\n                \n                # Convert page value to direction\n                page_value = float(scroll_page_match.group(1))\n                direction = \"up\" if page_value > 0 else \"down\"\n                actions.append((\"scroll\", direction))\n                    \n            # Extract text for write actions\n            write_match = re.search(r\"message=['\"](.+?)['\"]\", action)\n            if write_match:\n                text = write_match.group(1)\n                actions.append((\"write\", text))\n                \n            # Extract keys for press/hotkey actions\n            keys_match = re.findall(r\"keys=\\[(.*?)\\]\", action)\n            if keys_match:\n                keys = [k.strip(\"'\" \") for k in keys_match[0].split(\",\") if k.strip()]\n                # Always return lists for consistency with evaluator\n                if len(keys) <= 1:\n                    actions.append((\"press\", keys if keys else []))\n                else:\n                    actions.append((\"hotkey\", keys))\n                \n        return actions\n\n    def load_image(self, image_file, image_dir):\n        image_path = os.path.join(image_dir, image_file)\n        with open(image_path, \"rb\") as f:\n            image = f.read()\n        return image\n",
+      "### Code of /home/user/Workspace/src/image.py",
+      "import io\nfrom io import BytesIO\nfrom pathlib import Path\n\nimport pybase64 as base64\nfrom PIL import Image\n\n\ndef convert_to_png(image: Image.Image) -> bytes:\n    with io.BytesIO() as output:\n        image.save(output, format=\"PNG\")\n        return output.getvalue()\n\n\ndef encode_image_from_bytes(bytes: str):\n    return base64.b64encode(bytes).decode(\"utf-8\")\n\n\ndef encode_image(path: str | bytes | Image.Image):\n    if isinstance(path, bytes):\n        path = Image.open(BytesIO(path))\n\n    if isinstance(path, (str, Path)):\n        with Image.open(path) as image:\n            mimetype = image.get_format_mimetype()\n            if mimetype == \"image/png\":\n                with open(path, \"rb\") as f:\n                    encoded_image = base64.b64encode(f.read()).decode(\"utf-8\")\n                    return encoded_image\n            else:\n                png_image = convert_to_png(image)\n                return base64.b64encode(png_image).decode(\"utf-8\")\n    else:\n        png_image = convert_to_png(path)\n        return base64.b64encode(png_image).decode(\"utf-8\")\n\n\ndef encode_image_from_pil(image: Image.Image):\n    with io.BytesIO() as output:\n        image.save(output, format=\"PNG\")\n        return base64.b64encode(output.getvalue()).decode(\"utf-8\")\n\n\ndef decode_image(encoded_image: str | bytes) -> Image.Image:\n    if isinstance(encoded_image, str):\n        if encoded_image.startswith(\"data:image\"):\n            encoded_image = encoded_image.split(\",\")[1]\n        image = base64.b64decode(encoded_image)\n        image_stream = io.BytesIO(image)\n        return Image.open(image_stream)\n    else:\n        image_stream = io.BytesIO(encoded_image)\n        return Image.open(image_stream)\n\n\ndef get_image_size(path: str):\n    with Image.open(path) as image:\n        return image.size\n\n\ndef get_image_size_from_base64(base64_string):\n    if base64_string is None:\n        return None\n    if base64_string.startswith(\"data:image\"):\n        base64_string = base64_string.split(\",\")[1]\n    image_bytes = base64.b64decode(base64_string)\n    image = Image.open(BytesIO(image_bytes))\n    return image.size\n"
+    ]
+  }
+  

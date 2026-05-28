@@ -1,0 +1,76 @@
+{
+  "id": "seed7",
+  "config_id": "config-5",
+  "agentnet_id": "b13868ac-daf3-47b7-9dc8-f4b47e7a8a08",
+  "instruction": "Please help me open the project folder \"Desktop /simple_GRPO\" in VS Code. Then, search for the files that contain the word \"SamplingParams\" and copy the path of the first file that contains \"SamplingParams\"",
+  "snapshot": "vscode",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://github.com/lsdefine/simple_GRPO/archive/refs/heads/main.zip",
+            "path": "/home/user/Desktop/simple_GRPO.zip"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "/bin/bash",
+          "-c",
+          "cd /home/user/Desktop && unzip -q simple_GRPO.zip && rm -rf simple_GRPO.zip && mv simple_GRPO-main simple_GRPO"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_contents": false,
+  "provide_info": [
+    "This is a file structure of this repository:\n",
+    "simple_GRPO/Auto_Program/config.py",
+    "simple_GRPO/Auto_Program/hjy_grpo_program.py",
+    "simple_GRPO/Auto_Program/ref_server.py",
+    "simple_GRPO/Auto_Program/system_prompt_0312.txt",
+    "simple_GRPO/Auto_Program/system_prompt_0312_zero.txt",
+    "simple_GRPO/grpo_vllm_one.py",
+    "simple_GRPO/images/Qwen2dot5-3B-res.jpg",
+    "simple_GRPO/images/Qwen2dot5-7B-res.jpg",
+    "simple_GRPO/LICENSE",
+    "simple_GRPO/README.md",
+    "simple_GRPO/ref_server.py",
+    "simple_GRPO/requirements.txt",
+    "simple_GRPO/simple_grpo_v1/grpo_ref_split.py",
+    "simple_GRPO/simple_grpo_v1/readme.md",
+    "simple_GRPO/simple_grpo_v1/ref_server.py",
+    "simple_GRPO/simple-reinforce++/config.py",
+    "simple_GRPO/simple-reinforce++/ref_server.py",
+    "simple_GRPO/simple-reinforce++/rf++_vllm_one.py"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "id": "seed4",
+    "config_id": "config-1",
+    "instruction": "Use the Free Select Tool to select the center woman's shirt in the current image, then change its color to green.",
+    "agentnet_id": "5b0ef827-2dce-47bf-b81b-fe689780c663",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://img.freepik.com/free-photo/happy-young-company-smiling-friends-sitting-park-man-women-having-fun-together_285396-9034.jpg?semt=ais_hybrid&w=740&q=80",
+            "path": "/home/user/Desktop/friends_together.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/friends_together.png"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

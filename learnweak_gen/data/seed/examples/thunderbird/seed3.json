@@ -1,0 +1,52 @@
+{
+  "id": "seed3",
+  "config_id": "config-3",
+  "instruction": "Help me adjust the theme to white, then adjust the text and background to black and white, and only enable it when using high contrast themes.",
+  "snapshot": "thunderbird",
+  "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/thunderbird/thunderbird-profile.tar.gz",
+              "path": "/home/user/thunderbird-profile.tar.gz"
+            }
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "tar",
+            "-xzv",
+            "--recursive-unlink",
+            "-f",
+            "/home/user/thunderbird-profile.tar.gz",
+            "-C",
+            "/home/user/"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "/usr/bin/thunderbird"
+          ]
+        }
+      }
+    ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": []
+}

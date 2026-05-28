@@ -1,0 +1,42 @@
+{
+    "id": "seed3",
+    "config_id": "config-2",
+    "instruction": "Help me increase the hue density of this image, with a hue of 10, chromaticity of 15, and brightness of 20.",
+    "agentnet_id": "08193ff6-66fb-4a45-83e8-a18068772a93",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://t4.ftcdn.net/jpg/02/36/94/89/360_F_236948910_kfjLWwmxgacen9r4uLHLpg2uLqhC7oti.jpg",
+            "path": "/home/user/Desktop/fried_chicken.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/fried_chicken.jpg"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

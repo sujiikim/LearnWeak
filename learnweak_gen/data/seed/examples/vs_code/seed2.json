@@ -1,0 +1,35 @@
+{
+    "id": "seed2",
+    "config_id": "config-0",
+    "agentnet_id": "14d0f01f-8bbd-4801-8f43-cdbe11102e21",
+    "instruction": "Please help me create a new Java file named 'cuo. java' in the '/home/user/Desktop' folder using VS Code, and run this file after completion.",
+    "snapshot": "vscode",
+    "config": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "code"
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Visual Studio Code"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "vscode"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_contents": true
+  }
+  

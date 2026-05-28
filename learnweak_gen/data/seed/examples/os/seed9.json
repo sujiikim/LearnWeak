@@ -1,0 +1,28 @@
+{
+    "id": "seed9",
+    "config_id": "config-2",
+    "instruction": "Open the system settings, first help me turn off file history, and then check how many users there are in the current system.",
+    "snapshot": "os",
+    "config": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": "mkdir -p /home/user/Project/Project1",
+          "shell": true
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "os"
+    ],
+    "evaluator": {
+        "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

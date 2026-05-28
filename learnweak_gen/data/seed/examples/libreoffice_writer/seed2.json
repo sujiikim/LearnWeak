@@ -1,0 +1,46 @@
+{
+  "id": "seed2",
+  "config_id": "config-1",
+  "snapshot": "libreoffice_writter",
+  "instruction": "Add a blue highlight to the main title \"GUIDE TO REPORT WRITING\" in the current document. Then set the character spacing of the paragraph starting with \"A report is a highly structured document...\" to 1.08pt.",
+  "agentnet_id": "01a0f6ad-e432-4c45-9a63-ce44dddb472d",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/Guide_to_Report.docx",
+            "path": "/home/user/Desktop/Guide_to_Report.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Guide_to_Report.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/Guide_to_Report.docx",
+    "SKILLS FOR LEARNING\nGUIDE TO REPORT WRITING\n\nWHAT IS A REPORT?\n\nA report is a highly structured document written in a formal style. Normally a report is based on your reading and some form of practical work, such as an investigation, survey, experiment or review of practice in other organisations.\n\nReports are written for a particular purpose which may be to inform, to persuade, or to offer recommendations. They are also produced for a specific audience. Reports generally draw conclusions based on their findings and may suggest a course of action or areas of further research.\n\nReports generally aim to:\n\n•Set out the issue and explain why the activity was undertaken\n•Describe what was done and how it was done\n•Present the findings, conclusions, and any recommendations\n\nPREPARING AND WRITING YOUR REPORT\n\nUse your assignment brief to make sure you understand the purpose of the report and the intended audience. Have a plan allowing enough time to collect and organise your information and write, redraft, and proofread the report.\nYou should write in a formal academic style with simple sentences avoiding slang and unnecessary jargon. Paragraphs need to be concise and focused on one issue or area of discussion. Tables and diagrams can be used in your report but make sure they add to the reader’s understanding of the issues and that they are clearly labelled.  \n\nPRESENTATION AND LAYOUT\n\nIn a report the content is divided up into a number of sections each with a heading. These sections may be further divided into subsections. Sections and subsections make it easier for the reader to locate the information they need. Normally these sections and subsections are numbered using a progressive numbering system. Most word processing software will do this numbering for you.\n\n\n\n\n\n\n\n\n\nREPORT STRUCTURE – WHAT SECTIONS SHOULD A REPORT HAVE?\n\nTITLE\n\tThe title page should have the title of the report, the author’s name, and any other details required by the assignment brief such as module/ course titles.\n\nCONTENTS\n\tList all the main sections including the appendices remembering to include the page numbers. Any illustrations, tables or diagrams that you have used also need to be included in a separate list in this section. \n\nABSTRACT/\nSUMMARY\n\tA brief summary or overview of the report. It should be a document which can be read independently of the main report.\n\nINTRODUCTION\n\tA brief description of what the report is about, what it will cover, any relevant background information and any limitations on the contents or coverage of the report.\n\nMAIN SECTION\n\tPresents your results to the reader. Depending on the type of report and the instructions you have been given, this section might be further divided into areas such as literature review, methodology, results and discussion. \n\nCONCLUSIONS\n\tSummarises the key points from the main body of the report relating them back to the introduction. Do not introduce new material in this section . \n\nRECOMMENDATIONS\n\tThis section provides you with the opportunity to suggest changes and improvements. Any recommendations should be based on your conclusions.\n\nREFERENCES\n\tThe reference list should detail all the sources you have used in your report.\n\nAPPENDICESUse this section to include material that the reader might want to refer to but would disrupt the flow of the main report. Each appendix is numbered so that it can be referred to in the report.\n\n\nHELP AND ADVICE\nFor further help, please refer to the Skills for Learning website at: http://www.wlv.ac.uk/skills. \n\nFURTHER RESOURCES\nWe have an array of print and electronic resources about report writing including:\nBowden, J. (2011) Writing a report: how to prepare, write & present really effective reports. 9th ed. Oxford: How To Books.\nCottrell, S. (2014) Dissertations and project reports: a step by step guide. Basingstoke: Palgrave Macmillan.\n\n"
+  ]
+}

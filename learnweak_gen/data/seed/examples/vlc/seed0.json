@@ -1,0 +1,47 @@
+{
+  "id": "seed0",
+  "config_id": "config-0",
+  "snapshot": "base_setup",
+  "instruction": "I am currently watching the video \"person-bicycle-car.mp4\", please adjust the playback speed to 1.20x.",
+  "agentnet_id": "aae39c0c-2d95-4b42-8240-7c0004af5a7c",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/intel-iot-devkit/sample-videos/refs/heads/master/person-bicycle-car-detection.mp4",
+            "path": "/home/user/Desktop/person-bicycle-car.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show --start-time=15 '/home/user/Desktop/person-bicycle-car.mp4'",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low"
+}

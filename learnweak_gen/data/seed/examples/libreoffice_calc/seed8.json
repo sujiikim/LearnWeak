@@ -1,0 +1,53 @@
+{
+    "id": "seed8",
+    "config_id": "config-5",
+    "snapshot": "libreoffice_calc",
+    "instruction": "Calculate the logarithm of the data in cell D2 (Quantity) with base 2, output the result to cell E2, and apply criss-cross borders with blue color.",
+    "agentnet_id": "07535386-97a3-4b81-93ea-884b6ce6f373",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/Order_Details.xlsx",
+              "path": "/home/user/Order_Details.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/Order_Details.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Content of Order_Details.xlsx",
+      "Sheet 1: OrderDetails",
+      "- Range: Rows 1~301 / Columns A~D (4 columns)",
+      "- Columns: OrderDetailID | OrderID | ProductID | Quantity",
+      "First 10 rows of this sheet:",
+      "OrderDetailID\tOrderID\tProductID\tQuantity",
+      "1\t10248\t11\t12",
+      "2\t10248\t42\t10",
+      "3\t10248\t72\t5",
+      "4\t10249\t14\t9",
+      "5\t10249\t51\t40",
+      "6\t10250\t41\t10",
+      "7\t10250\t51\t35",
+      "8\t10250\t65\t15",
+      "9\t10251\t22\t6"
+    ]
+  }

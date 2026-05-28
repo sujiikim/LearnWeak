@@ -1,0 +1,42 @@
+{
+    "id": "seed5",
+    "config_id": "config-3",
+    "instruction": "Make this picture come alive by adding a waves filter to it. Set the amplitude and wavelength to 5, and the frame rate to 12.",
+    "agentnet_id": "158ab20e-330e-4b8e-8fac-f85c25113f61",
+    "snapshot": "gimp",
+    "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/gimp/P51_mustang_airexpo2012.xcf",
+            "path": "/home/user/Downloads/airexpo2012.xcf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Downloads/airexpo2012.xcf"
+        ]
+      }
+    }
+  ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "gimp"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      ""
+    ]
+  }

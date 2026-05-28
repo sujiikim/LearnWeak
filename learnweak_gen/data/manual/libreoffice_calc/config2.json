@@ -1,0 +1,50 @@
+{
+    "id": "config-2",
+    "snapshot": "libreoffice_calc",
+    "config": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://raw.githubusercontent.com/LEARNEREA/Excel_Files/refs/heads/master/Fashion_accessories.xlsx",
+              "path": "/home/user/Desktop/Fashion_accessories.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/Desktop/Fashion_accessories.xlsx"
+        }
+      }
+    ],
+    "trajectory": "trajectories/",
+    "related_apps": [
+      "libreoffice_calc"
+    ],
+    "evaluator": {
+      "func": "infeasible"
+    },
+    "proxy": false,
+    "fixed_ip": false,
+    "possibility_of_env_change": "low",
+    "provide_info": [
+      "### Content of Fashion_accessories.xlsx",
+      "Sheet 1: Sheet1",
+      "- Range: Rows 1~179 / Columns A~Q (17 columns)",
+      "- Columns: Invoice ID | Branch | City | Customer type | Gender | Product_line | Unit price | Quantity | Tax 5% | Total | Date | Time | Payment | cogs | gross margin percentage | gross income | Rating",
+      "First 10 rows of this sheet:",
+      "Invoice ID\tBranch\tCity\tCustomer type\tGender\tProduct_line\tUnit price\tQuantity\tTax 5%\tTotal\tDate\tTime\tPayment\tcogs\tgross margin percentage\tgross income\tRating",
+      "351-62-0822\tB\tMandalay\tMember\tFemale\tFashion_accessories\t14.48\t4\t2.896\t60.816\t2019-06-02 00:00:00\t18:07:00\tEwallet\t57.92\t4.761904762\t2.896\t4.5",
+      "649-29-6775\tB\tMandalay\tNormal\tMale\tFashion_accessories\t33.52\t1\t1.676\t35.196\t2019-08-02 00:00:00\t15:31:00\tCash\t33.52\t4.761904762\t1.676\t6.7",
+      "871-79-8483\tB\tMandalay\tNormal\tMale\tFashion_accessories\t94.13\t5\t23.5325\t494.1825\t2/25/2019\t19:39:00\tCredit card\t470.65\t4.761904762\t23.5325\t4.8",
+      "616-24-2851\tB\tMandalay\tMember\tFemale\tFashion_accessories\t17.87\t4\t3.574\t75.054\t3/22/2019\t14:42:00\tEwallet\t71.48\t4.761904762\t3.574\t6.5",
+      "109-28-2512\tB\tMandalay\tMember\tFemale\tFashion_accessories\t97.61\t6\t29.283\t614.943\t2019-07-01 00:00:00\t15:01:00\tEwallet\t585.66\t4.761904762\t29.283\t9.9",
+      "227-78-1148\tB\tMandalay\tNormal\tFemale\tFashion_accessories\t72.84\t7\t25.494\t535.374\t2/15/2019\t12:44:00\tCash\t509.88\t4.761904762\t25.494\t8.4",
+      "291-32-1427\tB\tMandalay\tMember\tMale\tFashion_accessories\t21.94\t5\t5.485\t115.185\t2019-05-03 00:00:00\t12:29:00\tEwallet\t109.7\t4.761904762\t5.485\t5.3",
+      "659-65-8956\tB\tMandalay\tMember\tMale\tFashion_accessories\t51.36\t1\t2.568\t53.928\t1/16/2019\t15:26:00\tEwallet\t51.36\t4.761904762\t2.568\t5.2",
+      "268-27-6179\tB\tMandalay\tMember\tFemale\tFashion_accessories\t56.47\t8\t22.588\t474.348\t2019-09-03 00:00:00\t14:57:00\tEwallet\t451.76\t4.761904762\t22.588\t7.3"
+    ]
+  }

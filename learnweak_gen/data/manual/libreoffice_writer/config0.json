@@ -1,0 +1,43 @@
+{
+  "id": "config-0",
+  "snapshot": "libreoffice_writter",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/sujiikim/samples/refs/heads/main/libreoffice_writer/FINAL_EXAM_Sched.docx",
+            "path": "/home/user/Desktop/FINAL_EXAM_Sched.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 5
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/FINAL_EXAM_Sched.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "provide_info": [
+    "### Content of /home/user/Desktop/FINAL_EXAM_Sched.docx",
+    "Final Exam Schedule for Spring 2026\n16-week classes\nShorter-session classes, such as 5-week or 8-week, should hold their Final Exam on the last day of class. Similarly, DD (Dynamically Dated) classes should hold their Final Exam on the last day of class. \n\n Exam Time \uf0e2 \tMonday\nMay 4th 2026Tuesday \nMay 5th 2026Wednesday \nMay 6th 2026Thursday \nMay 7th 2026\n7:30 am-9:30 am \tAll 8:00 am MWF \n classesAll 9:35 am TTH classesAll 9:10 am MWF classesAll 8:00 am TTH classes\n10:00 am-12:00 pm \tAll 10:20 am MWF \n classesAll ACC 255/256 \nand CHM 151 classesAll 11:30 am MWF \n classesAll 11:10 am TTH classes\n12:30 pm-2:30 pm \tAll 12:40 pm MWF \n classes\nand\nAll 12:45 pm Friday- and Saturday-only classesAll 12:45 pm TTH classes\nand\nAll 1:50 pm 4-day combination M-F classesAll 12:45 pm MW classes\nand\nAll 2:20 pm Friday-\nonly classesAll 2:20 pm TTH classes\nand\nAll 3:00 pm\n4-day combination M-F classes\n3:00 pm-5:00 pm \tAll 4:00 pm MW \n classes\nand\nAll 4:00 or 4:30 pm Monday-only classes\nand\nAll 4:00 or 4:30 pm Wednesday-only classesAll 2:20 pm MW classes\n \nAll 4:10 pm 4-day combination M-F classes \nMoved to Wednesday\n for fewer potential conflicts.All 4:00 pm TTH classes\nand\nAll 4:00 or 4:30 pm\nTuesday-only classes\nand\nAll 4:00 or 4:30 pm Thursday-only classes\n \nAll 4:10 pm 4-day combination M-F classesAdditional option for classes with time conflicts\n5:30 pm-7:30 pm \tAll classes that begin at 5:00, 5:30, or 6:00 pm will have their final exam on the first regular meeting day of the week  \n8:00 pm-10:00 pm \tAll classes that begin at 6:30, 7:00 or 7:30 pm will have their final exam on the first regular meeting day of the week  \nClasses with non-standard meeting patterns use the final exam period for the standard meeting pattern with the nearest starting time and academic unit chairs or directors bear the responsibility for resolving any ensuing student scheduling conflicts.\n\n1.There is some minimal potential for conflicts in some time slots where multiple class meeting times are scheduled for finals. If a conflict is identified, please read below. \n2.If there are no final exam conflicts in classrooms when scheduling finals as shown above…  \n\n•Each academic unit should work with the appropriate building manager(s) to post a template list of final-exam meeting times on the door of each classroom, two weeks prior to the start of finals week. The template will be available on the Schedule of Classes webpage in November/December, Look for Final Exam Information \uf0e0 Final Exam Template for Posting on Classroom Doors\n\nInstructors should list the class whose final exam is scheduled to be offered in the room and also input their name in the designated timeslot. If conflicts are identified, academic units should contact Schedule of Classes promptly, so alternative locations and/or times can be arranged well before finals begin.\n\n3.The following paragraph clarifies how to schedule exam times for classes that are not included on the above Spring Final Exam schedule:\n•If class meeting times do not fit within the standard meeting times and the published final examination schedule, the instructor will need to evaluate the schedule and determine which examination time will prevent or reduce conflicts for students. The instructor must then poll the class to find out whether there is an actual conflict. If insurmountable problems are encountered, the instructor must contact the relevant department Chair or, if necessary, the Dean. As addressed above, Schedule of Classes should also be contacted to provide assistance, Registrar.ScheduleofClasses@nau.edu \n4. In addition:\n•Most finals will take place in the room in which the class normally meets, at the Finals-designated time. Instructors should plan to administer their final exams based on the times listed in the chart above.\n•Since no finals are scheduled on Friday, instructors should poll single-night 5:30 to 10:00 pm Friday classes to determine a suitable option. Also, feel free to contact Schedule of Classes for assistance.\n•Shorter session classes (such as 8wk, M5A, M5B) hold their finals on the last scheduled day of class.\nFinal exams cannot be re-scheduled to occur during end-of-term week, with the exception of individualized instruction classes. Take-home final exams and other summative assessments administered in lieu of a final exam must be due no later than the end of the regularly scheduled final exam time for the class.\n"
+  ]
+}
